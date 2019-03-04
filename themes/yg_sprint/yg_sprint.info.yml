@@ -1,0 +1,28 @@
+name : YG Sprint  
+description: 'Designed & Developed by <a href=https://www.youngglobes.com/>Young Globes</a><br/>Contact us for any kind of Drupal services <a href=mailto:youngglobes@gmail.com>youngglobes@gmail.com</a>'
+core: 8.x 
+type: theme 
+screenshot: screenshot.png
+base theme: classy
+
+#Libraries
+libraries:
+  - yg_sprint/global-style
+  - yg_sprint/fontawesome
+
+#Regions
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  content: 'Content'
+  slider: 'Slider'
+  banner: 'Banner'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  email_subscribe: 'Email Subscribe'
+  footer_latest_blog: 'Latest Blog'
+  footer_menu: 'Footer Menu'
+  disable_blocks: 'Disable Blocks'
+
+
+  

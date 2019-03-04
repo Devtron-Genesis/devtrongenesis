@@ -1,0 +1,19 @@
+<!-- Contact-Us -->
+<div class="fh5co-section-contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h2>{{ content.field_title.0 }}</h2>
+        {{ content.field_body.0 }}
+        {% if content.field_email.0|render is not empty %}
+          <p><a href="mailto:{{ content.field_email.0 }}">{{ content.field_email.0 }}</a></p>
+        {% endif %}
+        <p class="phone">{{ content.field_phone_number.0}}</p>
+      </div>
+      <div class="col-md-6 col-md-push-1">
+        {{ content.field_contact_form.0 }}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact-Us End -->
