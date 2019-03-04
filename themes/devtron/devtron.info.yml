@@ -1,0 +1,36 @@
+name : devtron
+description: 'Devtron Genesis child theme '
+base theme: yg_sprint
+
+# core: 8.x 
+type: theme 
+screenshot: screenshot.png
+base theme: classy
+
+#Libraries
+libraries:
+  - yg_sprint/global-style
+  - yg_sprint/fontawesome
+
+#Regions
+regions:
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  content: 'Content'
+  slider: 'Slider'
+  banner: 'Banner'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  email_subscribe: 'Email Subscribe'
+  footer_latest_blog: 'Latest Blog'
+  footer_menu: 'Footer Menu'
+  disable_blocks: 'Disable Blocks'
+
+
+  
+
+# Information added by Drupal.org packaging script on 2018-10-16
+version: '8.x-1.0'
+core: '8.x'
+project: 'yg_sprint'
+datestamp: 1539677894

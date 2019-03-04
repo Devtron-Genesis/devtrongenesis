@@ -1,0 +1,92 @@
+{% if content.field_sidebar_style[0]['#markup'] == 0 %}
+<!-- Right-Sidebar -->
+<div class="container pb-lg">
+	<div class="row">
+		<div class="col-md-8" id="fh5co-content">
+			<h2>{{ content.field_title.0 }}</h2>
+			{{ content.field_body.0 }}
+			<div class="row fh5co-tile-image">
+				{{ content.field_gallery }}
+				<div class="col-md-12 rsb">
+					<figure>
+						<img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" class="img-responsive" alt="{{ content.field_title.0 }}">
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4" id="fh5co-sidebar">
+			<div class="fh5co-side-box fh5co-sidebox-links">
+				{{ content.field_blog_view.0 }}
+			</div>
+			<!-- END .fh5co-side-box -->
+			<div class="fh5co-side-box">
+				<h3 class="fh5co-side-title fh5co-heading-uppercase text-left">Text Widget</h3>		
+				{% set text = content.field_body|render|striptags %}
+				{{ text|length > 200 ? text|slice(0, 170) ~ '...' : text }}
+			</div>
+			<div class="fh5co-side-box">
+				<h3 class="fh5co-side-title fh5co-heading-uppercase text-left">Paragraph with Image</h3>		
+				<div class="row">
+					<div class="col-md-4">
+						<figure>
+							<img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" class="img-responsive" alt="{{ content.field_title.0 }}">
+						</figure>
+					</div>
+					<div class="col-md-8">
+						{% set text = content.field_body|render|striptags %}
+						{{ text|length > 200 ? text|slice(0, 170) ~ '...' : text }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END .row -->
+</div>
+<!-- Right-Sidebar End -->
+{% else %}
+<!-- Left-Sidebar -->
+<div class="container pb-lg">
+	<div class="row">
+		<div class="col-md-8 col-md-push-4" id="fh5co-content">
+			<h2>{{ content.field_title.0 }}</h2>
+			{{ content.field_body.0 }}
+			<div class="row fh5co-tile-image">
+				{{ content.field_gallery }}
+				<div class="col-md-12 rsb">
+					<figure>
+						<img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" class="img-responsive" alt="{{ content.field_title.0 }}">
+					</figure>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-md-pull-8" id="fh5co-sidebar">
+			<div class="fh5co-side-box fh5co-sidebox-links">
+				{{ content.field_blog_view.0 }}
+			</div>
+			<!-- END .fh5co-side-box -->
+			<div class="fh5co-side-box">
+				<h3 class="fh5co-side-title fh5co-heading-uppercase text-left">Text Widget</h3>		
+				{% set text = content.field_body|render|striptags %}
+				{{ text|length > 200 ? text|slice(0, 170) ~ '...' : text }}
+			</div>
+			<div class="fh5co-side-box">
+				<h3 class="fh5co-side-title fh5co-heading-uppercase text-left">Paragraph with Image</h3>		
+				<div class="row">
+					<div class="col-md-4">
+						<figure>
+						<figure><img src="{{ file_url(content.field_image['#items'].entity.uri.value) }}" class="img-responsive" alt="{{ content.field_title.0 }}"></figure>
+						</figure>
+					</div>
+					<div class="col-md-8">
+						{% set text = content.field_body|render|striptags %}
+						{{ text|length > 200 ? text|slice(0, 170) ~ '...' : text }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END .row -->
+</div>
+<!-- Left-Sidebar End -->
+
+{% endif %}

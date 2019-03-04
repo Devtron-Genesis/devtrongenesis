@@ -1,0 +1,14 @@
+global-style: # Libraries needed in all pages.
+  css:
+    theme:
+     
+  js:
+    
+
+  dependencies:
+    - core/drupalSettings
+    - core/drupal
+    - core/jquery
+    - core/modernizr
+
+

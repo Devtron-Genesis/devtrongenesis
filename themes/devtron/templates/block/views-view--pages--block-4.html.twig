@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Theme override to display a view of unformatted rows.
+ *
+ * Available variables:
+ * - title: The title of this group of rows. May be empty.
+ * - rows: A list of the view's row items.
+ *   - attributes: The row's HTML attributes.
+ *   - content: The row's content.
+ * - view: The view object.
+ * - default_row_class: A flag indicating whether default classes should be
+ *   used on rows.
+ *
+ * @see template_preprocess_views_view_unformatted()
+ */
+#}
+<div class="container" id="fh5co-journal">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="fh5co-heading text-center">
+        <h2 class="fh5co-heading-title">{{ view.getTitle() }} <span class="border"></span></h2>
+        <h3 class="fh5co-heading-intro">{{ header }}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="blog-owl-carousel-posts">
+      {% for row in rows %}
+        {{ row }}
+      {% endfor %}
+    </div>
+  </div>
+</div>

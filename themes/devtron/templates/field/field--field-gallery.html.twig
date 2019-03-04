@@ -1,0 +1,7 @@
+{% for item in items %}  
+	<div class="col-md-6">
+		<figure>
+			<img src="{{ file_url(item.content['#item'].entity.uri.value) }}" class="img-responsive" alt="Gallery Images">
+		</figure>
+	</div>
+{% endfor %}
