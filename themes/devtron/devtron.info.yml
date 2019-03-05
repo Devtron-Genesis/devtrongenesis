@@ -5,12 +5,12 @@ base theme: yg_sprint
 # core: 8.x 
 type: theme 
 screenshot: screenshot.png
-base theme: classy
+
 
 #Libraries
 libraries:
-  - yg_sprint/global-style
-  - yg_sprint/fontawesome
+  - 'devtron/global-styling'
+  - 'devtron/global-js'
 
 #Regions
 regions:
@@ -32,5 +32,5 @@ regions:
 # Information added by Drupal.org packaging script on 2018-10-16
 version: '8.x-1.0'
 core: '8.x'
-project: 'yg_sprint'
+project: 'devtron'
 datestamp: 1539677894

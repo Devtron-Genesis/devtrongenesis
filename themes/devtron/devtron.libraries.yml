@@ -1,9 +1,11 @@
-global-style: # Libraries needed in all pages.
+global-styling:
   css:
     theme:
-     
+      css/style.css: {}
+
+global-js:
   js:
-    
+    js/custom.js: {}
 
   dependencies:
     - core/drupalSettings
