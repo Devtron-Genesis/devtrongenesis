@@ -9,15 +9,12 @@
 @media only screen and (max-width: 993px)
 {
 	.our_services_main a.fh5co-main.custom-btn {
-    	margin-top: 12.8%;
+    	margin-top: 12.8% !important;;
 	}
 }
 @media only screen and (min-width: 1300px) 
 {
-	.our_services_main {
-    	padding-bottom: 38px !important;
-	}
-
+	
 }
 @media only screen and (min-width: 1200px) 
 {
