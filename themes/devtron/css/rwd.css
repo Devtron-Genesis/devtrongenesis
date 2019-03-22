@@ -9,10 +9,25 @@
 
 
 }
+@media only screen and (min-width: 993px)
+{
+	.contact_us_main {
+    	text-align: center;
+	}
+	.contact_us_main p:nth-child(3) {
+    	margin-top: 46px;
+	}
+	.contact_us_main p:nth-child(4) {
+    	float: right;
+	}
+
+}
 @media only screen and (min-width: 768px)
 {
-
-
+	.contact_us_main p:nth-child(2) {
+    	float: left;
+    	margin-right: 80px;
+	}
 
 }
 @media only screen and (min-width: 570px)

@@ -38,16 +38,6 @@ footer#fh5co-footer {
     position: relative;
     top: -5px;
 }
-.contact_us_main p:nth-child(2) {
-    float: left;
-    margin-right: 80px;
-}
-.contact_us_main p:nth-child(3) {
-    margin-top: 46px;
-}
-.contact_us_main p:nth-child(4) {
-    float: right;
-}
 .contact_us_main p:nth-child(5) {
     display: none;
 }
