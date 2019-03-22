@@ -1,4 +1,17 @@
 
+
+@media only screen and (max-width: 1300px) 
+{
+	.our_services_main a.fh5co-main.custom-btn {
+    	margin-top: 7.5%;
+	}
+}
+@media only screen and (max-width: 993px)
+{
+	.our_services_main a.fh5co-main.custom-btn {
+    	margin-top: 12.8%;
+	}
+}
 @media only screen and (min-width: 1300px) 
 {
 	.our_services_main {
@@ -14,14 +27,6 @@
 	.contact_us_main p:nth-child(4) {
     	float: right;
 	}
-	.our_services_main a.fh5co-main.custom-btn {
-    	margin-top: 7.5%;
-	}
-}
-@media only screen and (max-width: 1200px) 
-{
-
-
 }
 @media only screen and (min-width: 1024px)
 {
@@ -33,9 +38,6 @@
 	.contact_us_main p:nth-child(3) {
     	margin-top: 46px;
 	}
-	.our_services_main a.fh5co-main.custom-btn {
-    	margin-top: 12.8%;
-	}
 }
 @media only screen and (min-width: 768px)
 {
@@ -46,7 +48,6 @@
     	float: left;
     	margin-right: 30px;
 	}
-
 }
 @media only screen and (min-width: 570px)
 {
