@@ -47,26 +47,7 @@
           </div>
         </div>        
         <div class="container text-center fh5co-social-container">
-          <ul class="fh5co-social">
-            {% if facebook_url|render is not empty %}
-              <li><a href="{{ facebook_url }}"><i class="ti-facebook"></i> Facebook</a></li>
-            {% endif %}
-            {% if twitter_url|render is not empty %}
-              <li><a href="{{ twitter_url }}"><i class="ti-twitter-alt"></i> Twitter</a></li>
-            {% endif %}
-            {% if dribbble_url|render is not empty %}
-              <li><a href="{{ dribbble_url }}"><i class="ti-dribbble"></i> Dribbble</a></li>
-            {% endif %}
-            {% if google_plus_url|render is not empty %}
-              <li><a href="{{ google_plus_url }}"><i class="ti-google"></i> GooglePlus</a></li>
-            {% endif %}
-            {% if instagram_url|render is not empty %}
-              <li><a href="{{ instagram_url }}"><i class="ti-instagram"></i> Instagram</a></li>
-            {% endif %}  
-            {% if email|render is not empty %}
-              <li><a href="mailto:{{ email }}"><i class="ti-email"></i> Email us</a></li>
-            {% endif %}
-          </ul>
+          
         </div>
         <div id="fh5co-footer-links">
           <div class="container">
@@ -111,7 +92,36 @@
         </div>
         <div id="fh5co-copyright">
           <div class="container">
-            <p class="text-center"><small>&copy; 2018. <a href="#">Devtron Genesis</a>. All Rights Reserved.</p>
+              <div class="row">
+              <div class="col-md-4 col-lg-4"> </div>
+              <div class="col-md-4 col-lg-4">
+                <p class="text-center chech"><small>&copy; 2019. </small><a href="#">Devtron Genesis</a>. All Rights Reserved.</p> 
+              </div>
+              <div class="col-md-4 col-lg-4"> 
+                <div class="text-center fh5co-social-container">
+                  <ul class="fh5co-social">
+                    {% if facebook_url|render is not empty %}
+                      <li><a href="{{ facebook_url }}"><i class="ti-facebook"></i> Facebook</a></li>
+                    {% endif %}
+                    {% if twitter_url|render is not empty %}
+                      <li><a href="{{ twitter_url }}"><i class="ti-twitter-alt"></i> Twitter</a></li>
+                    {% endif %}
+                    {% if dribbble_url|render is not empty %}
+                      <li><a href="{{ dribbble_url }}"><i class="ti-dribbble"></i> Dribbble</a></li>
+                    {% endif %}
+                    {% if google_plus_url|render is not empty %}
+                      <li><a href="{{ google_plus_url }}"><i class="ti-google"></i> GooglePlus</a></li>
+                    {% endif %}
+                    {% if instagram_url|render is not empty %}
+                      <li><a href="{{ instagram_url }}"><i class="ti-instagram"></i> Instagram</a></li>
+                    {% endif %}  
+                    {% if email|render is not empty %}
+                      <li><a href="mailto:{{ email }}"><i class="ti-email"></i> Email us</a></li>
+                    {% endif %}
+                  </ul>
+                </div>
+              </div>
+            </div>
             <p class="text-center">
               <a href="#top" class="smoothscroll back-to-top"><i class="ti-angle-double-up"></i><span>Top</span></a>
             </p>

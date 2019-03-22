@@ -1,124 +1,124 @@
-  <div id="top"></div>
-    <div id="fh5co-page">
-      <div id="fh5co-main-nav-wrap">
-        <nav role="navigation" id="fh5co-nav-slide">
-          <div class="fh5co-nav-overlay"></div>
-            <div class="fh5co-nav-inner">
-              {{  page.primary_menu }}
-                <ul class="fh5co-social">
-                  {% if facebook_url|render is not empty %}
-                    <li><a href="{{ facebook_url }}"><i class="fa fa-facebook"></i></a></li>
-                  {% endif %}
-                  {% if twitter_url|render is not empty %}
-                    <li><a href="{{ twitter_url }}"><i class="fa fa-twitter"></i></a></li>
-                  {% endif %}
-                  {% if instagram_url|render is not empty %}
-                    <li><a href="{{ instagram_url }}"><i class="fa fa-instagram"></i></a></li>
-                  {% endif %}  
-                  {% if linkedin_url|render is not empty %}
-                    <li><a href="{{ linkedin_url }}"><i class="fa fa-linkedin"></i></a></li>
-                  {% endif %}
-              </ul>
-            </div>  
-        </nav>
-      </div>    
-    
-      <header id="fh5co-header" role="banner" style="background: #2e2e2e url(../themes/yg_sprint/images/bg.jpg);" >
-        <div class="container">
-          <a href="{{ path('<front>') }}" id="fh5co-header-logo">
-            <img src="{{ logopath }}" alt="{{ site_name }}" title="{{ 'Home'|t }}">
-          </a>
-          <a href="#" class="fh5co-header-bars js-nav-toggle"><span>Menu&nbsp;&nbsp;&nbsp;</span></a>
-          <h1 class="fh5co-header-intro">{{ page['#title'] }}</h1>
-        </div>
-      </header> 
-      <!-- /fh5co-header -->
-      <main id="fh5co-main" role="main">
-        {{ page.content }}
-      </main>
-      <footer id="fh5co-footer" role="contentinfo">
-        <div class="container">
-          <div id="fh5co-subscribe">
-            <div class="row">
-              <div class="col-md-4 col-md-offset-4">
-                {{ page.email_subscribe }}
-              </div>
-            </div>
-          </div>
-        </div>        
-        <div class="container text-center fh5co-social-container">
-          <ul class="fh5co-social">
-            {% if facebook_url|render is not empty %}
-              <li><a href="{{ facebook_url }}"><i class="ti-facebook"></i> Facebook</a></li>
-            {% endif %}
-            {% if twitter_url|render is not empty %}
-              <li><a href="{{ twitter_url }}"><i class="ti-twitter-alt"></i> Twitter</a></li>
-            {% endif %}
-            {% if dribbble_url|render is not empty %}
-              <li><a href="{{ dribbble_url }}"><i class="ti-dribbble"></i> Dribbble</a></li>
-            {% endif %}
-            {% if google_plus_url|render is not empty %}
-              <li><a href="{{ google_plus_url }}"><i class="ti-google"></i> GooglePlus</a></li>
-            {% endif %}
-            {% if instagram_url|render is not empty %}
-              <li><a href="{{ instagram_url }}"><i class="ti-instagram"></i> Instagram</a></li>
-            {% endif %}  
-            {% if email|render is not empty %}
-              <li><a href="mailto:{{ email }}"><i class="ti-email"></i> Email us</a></li>
-            {% endif %}
-          </ul>
-        </div>
-        <div id="fh5co-footer-links">
-          <div class="container">
-            <div class="row">
+	<div id="top"></div>
+		<div id="fh5co-page">
+			<div id="fh5co-main-nav-wrap">
+				<nav role="navigation" id="fh5co-nav-slide">
+					<div class="fh5co-nav-overlay"></div>
+						<div class="fh5co-nav-inner">
+							{{  page.primary_menu }}
+								<ul class="fh5co-social">
+									{% if facebook_url|render is not empty %}
+										<li><a href="{{ facebook_url }}"><i class="fa fa-facebook"></i></a></li>
+									{% endif %}
+									{% if twitter_url|render is not empty %}
+										<li><a href="{{ twitter_url }}"><i class="fa fa-twitter"></i></a></li>
+									{% endif %}
+									{% if instagram_url|render is not empty %}
+										<li><a href="{{ instagram_url }}"><i class="fa fa-instagram"></i></a></li>
+									{% endif %}  
+									{% if linkedin_url|render is not empty %}
+										<li><a href="{{ linkedin_url }}"><i class="fa fa-linkedin"></i></a></li>
+									{% endif %}
+							</ul>
+						</div>  
+				</nav>
+			</div>    
+		
+			<header id="fh5co-header" role="banner" style="background: #2e2e2e url(../themes/yg_sprint/images/bg.jpg);" >
+				<div class="container">
+					<a href="{{ path('<front>') }}" id="fh5co-header-logo">
+						<img src="{{ logopath }}" alt="{{ site_name }}" title="{{ 'Home'|t }}">
+					</a>
+					<a href="#" class="fh5co-header-bars js-nav-toggle"><span>Menu&nbsp;&nbsp;&nbsp;</span></a>
+					<h1 class="fh5co-header-intro">{{ page['#title'] }}</h1>
+				</div>
+			</header> 
+			<!-- /fh5co-header -->
+			<main id="fh5co-main" role="main">
+				{{ page.content }}
+			</main>
+			<footer id="fh5co-footer" role="contentinfo">
+				<div class="container">
+					<div id="fh5co-subscribe">
+						<div class="row">
+							<div class="col-md-4 col-md-offset-4">
+								{{ page.email_subscribe }}
+							</div>
+						</div>
+					</div>
+				</div>        
+				<div class="container text-center fh5co-social-container">
+					<ul class="fh5co-social">
+						{% if facebook_url|render is not empty %}
+							<li><a href="{{ facebook_url }}"><i class="ti-facebook"></i> Facebook</a></li>
+						{% endif %}
+						{% if twitter_url|render is not empty %}
+							<li><a href="{{ twitter_url }}"><i class="ti-twitter-alt"></i> Twitter</a></li>
+						{% endif %}
+						{% if dribbble_url|render is not empty %}
+							<li><a href="{{ dribbble_url }}"><i class="ti-dribbble"></i> Dribbble</a></li>
+						{% endif %}
+						{% if google_plus_url|render is not empty %}
+							<li><a href="{{ google_plus_url }}"><i class="ti-google"></i> GooglePlus</a></li>
+						{% endif %}
+						{% if instagram_url|render is not empty %}
+							<li><a href="{{ instagram_url }}"><i class="ti-instagram"></i> Instagram</a></li>
+						{% endif %}  
+						{% if email|render is not empty %}
+							<li><a href="mailto:{{ email }}"><i class="ti-email"></i> Email us</a></li>
+						{% endif %}
+					</ul>
+				</div>
+				<div id="fh5co-footer-links">
+					<div class="container">
+						<div class="row">
 
-              <div class="col-md-3 col-sm-3 col-xs-6 col-xxs-12 col-md-offset-1">
-                <h3 class="footer-title">
-                  {% if about_title|render is not empty %}{{ about_title }}{% endif %}
-                </h3>
-                  {% if about_description %}
-                    {% autoescape 'html' %}
-                      {{ about_description|raw }}
-                    {% endautoescape %}
-                  {% endif %}
-              </div>
-              <div class="col-md-2 col-sm-3 col-xs-6 col-xxs-12">
-                <div class="footer-links">
-                  {{ page.footer_menu }}
-                </div>
-              </div>
-              <div class="col-md-2 col-sm-3 col-xs-6 col-xxs-12">
-                {{ page.footer_latest_blog }}
-              </div>
-            <div class="col-md-3 col-sm-3 col-xs-6 col-xxs-12 col-md-offset-1">
-              <h3 class="footer-title">
-                {% if contact_title|render is not empty %}{{ contact_title }}{% endif %}
-              </h3>
-                <div class="footer-links">
-                  <address>
-                    {% if address %}
-                      {% autoescape 'html' %}
-                        {{ address|raw }}
-                      {% endautoescape %}
-                    {% endif %}
-                  </address>
-                  <p>{% if phone|render is not empty %}{{ phone }}{% endif %}</p>
-                  {% if email|render is not empty %}<a href="mailto:{{ email }}">{{ email }}</a>{% endif %}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="fh5co-copyright">
-          <div class="container">
-            <p class="text-center chech"><small>&copy; 2018. <a href="#">Devtron Genesis</a>. All Rights Reserved.</p>
-            <p class="text-center">
-              <a href="#top" class="smoothscroll back-to-top"><i class="ti-angle-double-up"></i><span>Top</span></a>
-            </p>
-          </div>
+							<div class="col-md-3 col-sm-3 col-xs-6 col-xxs-12 col-md-offset-1">
+								<h3 class="footer-title">
+									{% if about_title|render is not empty %}{{ about_title }}{% endif %}
+								</h3>
+									{% if about_description %}
+										{% autoescape 'html' %}
+											{{ about_description|raw }}
+										{% endautoescape %}
+									{% endif %}
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6 col-xxs-12">
+								<div class="footer-links">
+									{{ page.footer_menu }}
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-6 col-xxs-12">
+								{{ page.footer_latest_blog }}
+							</div>
+						<div class="col-md-3 col-sm-3 col-xs-6 col-xxs-12 col-md-offset-1">
+							<h3 class="footer-title">
+								{% if contact_title|render is not empty %}{{ contact_title }}{% endif %}
+							</h3>
+								<div class="footer-links">
+									<address>
+										{% if address %}
+											{% autoescape 'html' %}
+												{{ address|raw }}
+											{% endautoescape %}
+										{% endif %}
+									</address>
+									<p>{% if phone|render is not empty %}{{ phone }}{% endif %}</p>
+									{% if email|render is not empty %}<a href="mailto:{{ email }}">{{ email }}</a>{% endif %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="fh5co-copyright">
+					<div class="container">
+						<p class="text-center chech"><small>&copy; 2019. <a href="#">Devtron Genesis</a>. All Rights Reserved.</p>
+						<p class="text-center">
+							<a href="#top" class="smoothscroll back-to-top"><i class="ti-angle-double-up"></i><span>Top</span></a>
+						</p>
+					</div>
 
-        </div>
-      </footer>
+				</div>
+			</footer>
 
-    </div>
+		</div>
 

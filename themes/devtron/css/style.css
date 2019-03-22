@@ -1,0 +1,62 @@
+
+
+body#outer-page #fh5co-workwithus .fh5co-workwithus-intro {
+    padding: 0px;
+}
+body#outer-page .fh5co-workwithus-intro h3.has-btn-after {
+    margin-bottom: 0px;
+}
+
+body#outer-page .fh5co-workwithus-intro h2 {
+    padding: 50px 0px 45px 0px;
+}	
+body#outer-page .fh5co-workwithus-intro > p {
+    padding: 62px 0px 66px 0px;
+    margin-bottom: 0px;
+}
+body#outer-page div#fh5co-journal .views-row .item {
+    text-align: center;
+}
+div#fh5co-journal .views-field figure {
+    margin-bottom: 0px;
+}
+
+div#fh5co-journal .views-field h2 {
+    padding-top: 10px;
+    /* position: relative; */
+    clear: both;
+    /* text-align: center; */
+    padding-bottom: 5px;
+}
+footer#fh5co-footer {
+    /* margin-bottom: 0px !important; */
+    padding-bottom: 0px;
+}
+
+.text-center.fh5co-social-container ul.fh5co-social li {
+    margin: 0px 10px;
+}
+
+.text-center.fh5co-social-container ul.fh5co-social {
+    position: relative;
+    top: -5px;
+}
+
+.contact_us_main p:nth-child(2) {
+    /* display: none; */
+    float: left;
+    /* right: 26px; */
+    /* position: relative; */
+    margin-right: 80px;
+}
+.contact_us_main p:nth-child(3) {
+    margin-top: 46px;
+}
+
+.contact_us_main p:nth-child(4) {
+    float: right;
+}
+.contact_us_main p:nth-child(5) {
+    display: none;
+}
+
