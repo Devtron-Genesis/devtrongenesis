@@ -32,9 +32,9 @@
 }
 @media only screen and (min-width: 993px)
 {
-	.contact_us_main p:nth-child(3) {
+	/*.contact_us_main p:nth-child(3) {
     	margin-top: 46px;
-	}
+	}*/
 }
 @media only screen and (min-width: 768px)
 {
