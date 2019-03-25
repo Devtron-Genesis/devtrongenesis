@@ -47,6 +47,17 @@ footer#fh5co-footer {
 p.portfolio_fron_rm {
     margin-bottom: 8px;
 }
+.contact_us_main > div {
+    float: left;
+    text-align: left;
+}
+.contact_us_main h3 {
+    color: #000;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
 
 /*    ***  Footer  ***  */
 main#fh5co-main {
