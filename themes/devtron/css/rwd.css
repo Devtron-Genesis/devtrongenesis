@@ -30,11 +30,23 @@
 
 
 }
-@media only screen and (min-width: 993px)
+@media only screen and (max-width: 993px)
 {
 	/*.contact_us_main p:nth-child(3) {
     	margin-top: 46px;
 	}*/
+	.fh5co-section-contact p {
+		clear: both;
+	}
+}
+@media only screen and (max-width: 768px)
+{
+	.contact_us_main > div {
+    	float: none;
+	}
+	.contact_us_main h3 {
+    	text-align: center;
+	}
 }
 @media only screen and (min-width: 768px)
 {
