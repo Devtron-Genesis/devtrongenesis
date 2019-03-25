@@ -25,6 +25,7 @@ regions:
   footer_latest_blog: 'Latest Blog'
   footer_menu: 'Footer Menu'
   disable_blocks: 'Disable Blocks'
+  language_switcher_footer: 'footer language switcher'
 
 
   
