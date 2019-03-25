@@ -38,6 +38,9 @@
 	.fh5co-section-contact p {
 		clear: both;
 	}
+	.contact_us_main p {
+    	text-align: center;
+	}
 }
 @media only screen and (max-width: 768px)
 {
