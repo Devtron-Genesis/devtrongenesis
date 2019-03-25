@@ -55,9 +55,26 @@ p.portfolio_fron_rm {
 .fh5co-section-contact {
     padding: 0px;
 }
+.field__item {
+    display: block;
+}
+/*   ** Language switcher ***/
+.region-language-switcher-footer ul.links li {
+    list-style: none;
+    float: left;
+}
+.region-language-switcher-footer ul.links li:nth-child(2) {
+    padding-left: 30px;
+}
+.region-language-switcher-footer .language-switcher-language-url {
+    position: relative;
+    top: -14px;
+}
 
 
-/*    ***  Footer  ***  */
+/********************
+******  Footer  *****
+*********************/
 main#fh5co-main {
     padding: 0px;
 }
