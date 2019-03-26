@@ -81,6 +81,10 @@ main#fh5co-main {
 div#fh5co-copyright .scroll-totop-main {
     padding: 30px 0px;
 }
-/*.fh5co-social-container {
-    display: none;
-}*/
+.fh5co-social-container.socail-none-front {
+    margin-bottom: 2.4em;
+}
+.scroll-totop-main.scroll-none-front {
+    margin-bottom: 0px;
+    padding: 30px 0px 42px 0px;
+}
