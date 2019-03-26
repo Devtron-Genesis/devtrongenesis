@@ -84,7 +84,7 @@ div#fh5co-copyright .scroll-totop-main {
 .fh5co-social-container.socail-none-front {
     margin-bottom: 2.4em !important;
 }
-.scroll-totop-main.scroll-none-front {
+.scroll-none-front {
     margin-bottom: 0px;
-    padding: 30px 0px 42px 0px;
+    padding: 30px 0px 42px 0px !important;
 }
