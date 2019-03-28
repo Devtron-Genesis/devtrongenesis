@@ -11,10 +11,10 @@ body#outer-page .fh5co-workwithus-intro h3.has-btn-after {
     margin-bottom: 0px;
 }
 body#outer-page .fh5co-workwithus-intro h2 {
-    padding: 50px 0px 45px 0px;
+    padding: 47px 0px 40px 0px;
 }	
 body#outer-page .fh5co-workwithus-intro > p {
-    padding: 62px 0px 66px 0px;
+    padding: 58px 0px 63px 0px;
     margin-bottom: 0px;
 }
 body#outer-page div#fh5co-journal .views-row .item {
@@ -24,9 +24,9 @@ div#fh5co-journal .views-field figure {
     margin-bottom: 0px;
 }
 div#fh5co-journal .views-field h2 {
-    padding-top: 10px;
+    padding-top: 20px;
     clear: both;
-    padding-bottom: 5px;
+    padding-bottom: 15px;
 }
 footer#fh5co-footer {
     padding-bottom: 0px;
@@ -71,6 +71,59 @@ p.portfolio_fron_rm {
     top: -14px;
 }
 
+.fh5co-heading.text-center {
+    margin: 40px 0px 60px 0px;
+}
+h2.fh5co-heading-title {
+    margin: 0px;
+}
+.field--name-field-service-item-ref .field__item h2 {
+    margin: 20px 0px 15px 0px;
+}
+.fh5co-main-service {
+    margin-bottom: 22px;
+}
+.our_services_main {
+    padding-bottom: 0px !important;
+}
+section#fh5co-workwithus {
+    margin-bottom: 0px;
+}
+div#fh5co-journal .fh5co-heading.text-center {
+    margin: 42px 0px 55px 0px;
+
+}
+.our_services_main .fh5co-heading.text-center {
+    margin: 40px 0px 60px 0px;
+}
+#fh5co-journal .fh5co-heading .fh5co-heading-intro {
+    margin-top: 49px;
+}
+div#fh5co-journal {
+    margin-bottom: 47px;
+}
+div#fh5co-journal .portfolio_front_main {
+    margin-bottom: 35px;
+}
+div#fh5co-journal .portfolio_front_main p {
+    margin-bottom: 23px;
+}
+section#fh5co-testimonial {
+    padding: 56px 0px 128px 0px;
+}
+section#fh5co-testimonial .quote-icon {
+    margin-bottom: 43px;
+}
+.field__item.address_contact_form {
+    margin-top: 42px;
+}
+.webform-submission-contact-us-paragraph-34-form div#edit-actions {
+    margin-top: 30px;
+}
+div#fh5co-copyright .fh5co-social-container {
+    margin-bottom: 0px;
+}
+
 
 /********************
 ******  Footer  *****
@@ -79,7 +132,7 @@ main#fh5co-main {
     padding: 0px;
 }
 div#fh5co-copyright .scroll-totop-main {
-    padding: 30px 0px;
+    padding: 20px 0px;
 }
 .fh5co-social-container.socail-none-front {
     margin-bottom: 2.4em !important;
@@ -87,4 +140,7 @@ div#fh5co-copyright .scroll-totop-main {
 .scroll-none-front {
     margin-bottom: 0px;
     padding: 30px 0px 45px 0px !important;
+}
+div#fh5co-copyright p.chech {
+    margin-bottom: 15px;
 }
