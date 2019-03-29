@@ -59,6 +59,13 @@ p.portfolio_fron_rm {
 .field__item {
     display: block;
 }
+.contact_us_main h2 {
+    position: relative;
+    line-height: 1.7;
+    font-weight: 700;
+    font-size: 40px;
+}
+
 /*   ** Language switcher ***/
 .region-language-switcher-footer ul.links li {
     list-style: none;
