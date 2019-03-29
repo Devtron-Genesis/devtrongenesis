@@ -24,6 +24,12 @@
 	.contact_us_main p:nth-child(4) {
     	clear: both;
 	}
+	.contact_us_main {
+       width: 47%;
+    }
+    .contact_us_main .address_contact_form {
+       left: 130px;
+    }
 }
 @media only screen and (min-width: 1024px)
 {
