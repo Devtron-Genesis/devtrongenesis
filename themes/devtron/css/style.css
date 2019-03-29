@@ -60,6 +60,7 @@ p.portfolio_fron_rm {
     display: block;
 }
 .contact_us_main h2 {
+    margin-bottom: 12px;
     position: relative;
     line-height: 1.7;
     font-weight: 700;
