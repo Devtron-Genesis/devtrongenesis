@@ -63,3 +63,10 @@ function devtron_preprocess_node(&$variables) {
   $variables['call_to_action'] = (views_embed_view('pages', 'block_5'));
 
 }
+function devtron_preprocess_html(&$variables) {
+  // Add node id to the body class.
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node) {
+    $variables['attributes']['class'][] = 'node-' . $node->id();
+  }
+}
