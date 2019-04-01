@@ -16,5 +16,7 @@
   	$('.language-en li.en.is-active').hide();
   	$('.language-nb li.nb.is-active').hide();
 
+    $('.our_services_main .field__item > div').matchHeight();    
+
 }); /* End of the document.ready */
 })(jQuery);
