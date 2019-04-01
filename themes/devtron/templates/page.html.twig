@@ -53,8 +53,8 @@
 							<a href="#top" class="smoothscroll back-to-top"><i class="ti-angle-double-up"></i><span>Top</span></a>
 						</p>
 						<div class="row">
-			              <div class="col-md-4 col-lg-4"> {{ page.language_switcher_footer }}</div>
-			              <div class="col-md-4 col-lg-4">
+			              <div class="col-md-4 col-lg-4 footer-lang-switcher"> {{ page.language_switcher_footer }}</div>
+			              <div class="col-md-4 col-lg-4 copy-right-main">
 			                <p class="text-center chech"><small>&copy; 2019. </small><a href="#">Devtron Genesis</a>. All Rights Reserved.</p> 
 			              </div>
 			              <div class="col-md-4 col-lg-4"> 
@@ -74,7 +74,10 @@
 			                    {% endif %}
 			                    {% if instagram_url|render is not empty %}
 			                      <li><a href="{{ instagram_url }}"><i class="ti-instagram"></i> Instagram</a></li>
-			                    {% endif %}  
+			                    {% endif %}
+			                    {% if linkedin_url|render is not empty %}
+                      				<li><a href="{{ linkedin_url }}"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+                    			{% endif %}  
 			                    {% if email|render is not empty %}
 			                      <li><a href="mailto:{{ email }}"><i class="ti-email"></i> Email us</a></li>
 			                    {% endif %}

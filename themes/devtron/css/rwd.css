@@ -44,6 +44,10 @@
 	.contact_us_main p {
     	text-align: center;
 	}
+	.copy-right-main {
+    	width: 100%;
+    	float: left;
+	}
 }
 @media only screen and (max-width: 768px)
 {
