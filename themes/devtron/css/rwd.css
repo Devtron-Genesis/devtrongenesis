@@ -68,6 +68,10 @@
 	}
 	.region-language-switcher-footer ul.links li {
 		float: none;
+		text-align: center;
+	}
+	.region-language-switcher-footer ul.links li span {
+		float: none;
 	}
 }
 @media only screen and (min-width: 768px)
