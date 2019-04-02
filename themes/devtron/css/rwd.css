@@ -107,6 +107,9 @@
 	.node-1 .our_services_main a.fh5co-main.custom-btn {
 		margin-top: 1px !important;
 	}
+	.node-1 .owl-carousel.owl-theme .owl-controls .owl-dots {
+		margin-bottom: -80px !important;
+	}
 }
 @media only screen and (min-width: 768px)
 {
