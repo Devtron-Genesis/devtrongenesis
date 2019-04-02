@@ -152,7 +152,9 @@ div#fh5co-copyright .fh5co-social-container {
 .node-23 .contact_us_main > div {
     left: 0px;
 }
-
+.node-21 .hover-img img {
+    width: 100%;
+}
 
 /********************
 ******  Footer  *****
