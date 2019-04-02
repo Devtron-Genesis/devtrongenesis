@@ -163,6 +163,9 @@ main#fh5co-main {
 div#fh5co-copyright .scroll-totop-main {
     padding: 20px 0px;
 }
+.node-1 div#fh5co-copyright .scroll-totop-main {
+    padding: 40px 0px 20px 0px;
+}
 .our_services_main .field__item > div {
     margin-bottom: 3px;
 }
