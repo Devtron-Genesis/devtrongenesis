@@ -16,7 +16,11 @@
   	$('.language-en li.en.is-active').hide();
   	$('.language-nb li.nb.is-active').hide();
 
-    $('.our_services_main .field__item > div').matchHeight();    
+    $('.our_services_main .field__item > div').matchHeight();// services page
+    $('.node-22 p.address_contact_form').matchHeight(); 
+    $('.node-22 .views-field-nothing span > .item').matchHeight(); // blogs page
+    $('.node-22 .views-field-nothing img').matchHeight();
+
 
 }); /* End of the document.ready */
 })(jQuery);
