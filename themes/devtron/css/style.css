@@ -168,10 +168,7 @@ div#fh5co-copyright .scroll-totop-main {
 div#fh5co-copyright p.chech {
     margin-bottom: 15px;
 }
-.node-21 .scroll-none-front{
-    margin-bottom: 0px;
-    padding: 57px 0px 48px 0px !important;
-}
+.node-21 .scroll-none-front,
 .node-20 .scroll-none-front {
     margin-bottom: 0px;
     padding: 55px 0px 48px 0px !important;
