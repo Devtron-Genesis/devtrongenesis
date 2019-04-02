@@ -139,6 +139,9 @@ div#fh5co-copyright .fh5co-social-container {
 .node-22 p.address_contact_form {
     margin-bottom: 22px;
 }
+.node-22 .views-field-nothing span > .item > div {
+    margin-bottom: 33px;
+}
 
 /********************
 ******  Footer  *****
@@ -175,5 +178,5 @@ footer#fh5co-footer > .container {
     display: none;
 }
 .node-22 footer#fh5co-footer #fh5co-copyright {
-    margin-top: -35px;
+    margin-top: -5px;
 }
