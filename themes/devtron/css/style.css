@@ -164,3 +164,16 @@ div#fh5co-copyright p.chech {
     margin-bottom: 0px;
     padding: 34px 0px 45px 0px !important;
 }
+.node-22 .scroll-none-front {
+    margin-bottom: 0px;
+    padding: 0px 0px 48px 0px !important;
+}
+.node-22 div#fh5co-journal {
+    margin-bottom: 0px;
+}
+footer#fh5co-footer > .container {
+    display: none;
+}
+.node-22 footer#fh5co-footer #fh5co-copyright {
+    margin-top: -35px;
+}
