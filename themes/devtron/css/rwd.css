@@ -60,6 +60,12 @@
 	.contact_us_main h3 {
     	text-align: center;
 	}
+	.contact_us_main h2 {
+    	text-align: center;
+	}
+	.webform-submission-contact-us-paragraph-34-form div#edit-actions {
+		text-align: center;
+	}
 }
 @media only screen and (min-width: 768px)
 {
