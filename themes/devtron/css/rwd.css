@@ -66,6 +66,9 @@
 	.webform-submission-contact-us-paragraph-34-form div#edit-actions {
 		text-align: center;
 	}
+	.region-language-switcher-footer ul.links li {
+		float: none;
+	}
 }
 @media only screen and (min-width: 768px)
 {
