@@ -132,6 +132,9 @@
     	position: relative;
     	left: 50px;
 	}
+	.node-1 p.portfolio_fron_rm {
+    	margin-bottom: 43px;
+	}
 }
 @media only screen and (min-width: 570px)
 {
