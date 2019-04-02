@@ -122,6 +122,15 @@
 	.node-20 .scroll-none-front {
 		padding: 55px 0px 61px 0px !important;
 	}
+	.node-21 .fh5co-heading.text-center {
+    	margin: 42px 0px 62px 0px;
+	}
+	.node-21 .hover-img img {
+    	width: 100%;
+	}
+	.node-21 .fh5co-heading.text-center {
+    	margin: 42px 0px 62px 0px;
+	}
 }
 @media only screen and (min-width: 768px)
 {
