@@ -136,7 +136,7 @@
 		padding: 55px 0px 61px 0px !important;
 	}
 	.node-22 .scroll-none-front {
-		padding-bottom: 61px;
+		padding-bottom: 61px !important;
 	}
 }
 @media only screen and (min-width: 768px)
