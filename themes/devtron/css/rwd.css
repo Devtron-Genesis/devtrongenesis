@@ -83,11 +83,14 @@
     	text-align: center;
 	}
 	.node-23 .fh5co-section-contact {
-    	margin-top: 18px;
+    	margin-top: 20px;
     	margin-bottom: 47px;
 	}
 	.node-23 .contact_us_main h2 {
 		margin-bottom: 33px;
+	}
+	.node-23 .address_contact_form+p {
+		display: none;
 	}
 }
 @media only screen and (min-width: 768px)
