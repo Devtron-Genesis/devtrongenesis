@@ -18,7 +18,7 @@
 
     $('.our_services_main .field__item > div').matchHeight();// services page
     $('.node-22 p.address_contact_form').matchHeight(); 
-    $('.node-22 .views-field-nothing span > .item').matchHeight(); // blogs page
+    // $('.node-22 .views-field-nothing span > .item').matchHeight(); // blogs page
     $('.node-22 .views-field-nothing img').matchHeight();
 
 
