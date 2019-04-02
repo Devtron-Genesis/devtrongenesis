@@ -101,6 +101,12 @@
 	#fh5co-header #fh5co-header-logo img {
     	width: 120px;
 	}
+	.node-1 .our_services_main .fh5co-heading.text-center {
+		margin: 42px 0px 61px 0px;
+	}
+	.node-1 .our_services_main a.fh5co-main.custom-btn {
+		margin-top: 1px;
+	}
 }
 @media only screen and (min-width: 768px)
 {
