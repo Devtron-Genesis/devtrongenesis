@@ -24,36 +24,49 @@
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-{% import _self as menus %} 
-  <ul id="fh5co-main-nav">
-      {% for item in items %}
-        {%
-          set classes = [
-          'nav-link',
-          item.is_expanded ? 'menu-item--expanded',
-          item.is_expanded ? 'dropdown',
-          item.is_collapsed ? 'menu-item--collapsed',
-          item.in_active_trail ? 'active',
-          ]
-       %}
-          {# Menu with submenu #}
-          {% if item.below %}
-          <li class="dropdown-submenu">
-          <a {{ item.attributes.addClass( classes,'item') }} href="{{ item.url }}" data-hover="dropdown-menu" class="dropdown-toggle" data-toggle="dropdown">{{ item.title }}</a>
-              <ul class="dropdown-menu dropdown">
-              {# Menu -> Submenu #}
-                {% for item in item.below %}
-                <li><a href="{{ item.url }}" {{ item.attributes }}>{{ item.title }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
-          {# Menu without submenu #}
-          {% else %}
-          {# Menu - Link #}
-           <li {{ item.attributes.addClass( classes,'item') }}><a href="{{ item.url }}">{{ item.title }}</a></li>
-          {% endif %}
+{% import _self as menus %}
+  <nav class="navbar navbar-expand-lg navbar-dark primary-color main_navigation_bar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="/sites/default/files/mobile-menu.svg" class="navbar-toggler-icon" />
+    </button>
+    <div class="collapse navbar-collapse" id="basicExampleNav">
 
-       {% endfor %}
-    </ul>
+      <ul id="fh5co-main-nav" class="navbar-nav mr-auto">
+          {% for item in items %}
+            {%
+              set classes = [
+              'nav-link',
+              item.is_expanded ? 'menu-item--expanded',
+              item.is_expanded ? 'dropdown',
+              item.is_collapsed ? 'menu-item--collapsed',
+              item.in_active_trail ? 'active',
+              ]
+           %}
+              {# Menu with submenu #}
+              {% if item.below %}
+              <li class="dropdown-submenu nav-item dropdown">
+              <a {{ item.attributes.addClass( classes,'item') }} href="{{ item.url }}" data-hover="dropdown-menu" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">{{ item.title }}<span class="glyphicon glyphicon-chevron-down"></span></a>
+                  <ul class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                  {# Menu -> Submenu #}
+                    {% for item in item.below %}
+                    <li><a href="{{ item.url }}" {{ item.attributes }} class="dropdown-item">{{ item.title }}</a></li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {# Menu without submenu #}
+              {% else %}
+              {# Menu - Link #}
+               <li {{ item.attributes.addClass( classes,'item') }} class="nav-item"><a href="{{ item.url }}" class="nav-link">{{ item.title }}</a></li>
+              {% endif %}
+
+           {% endfor %}
+        </ul>
+
+      </div>
+  </nav>
 {% endmacro %}
  
+
+

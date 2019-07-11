@@ -1,5 +1,7 @@
   <div id="top"></div>
     <div id="fh5co-page">
+     
+
       <div id="fh5co-main-nav-wrap">
         <nav role="navigation" id="fh5co-nav-slide">
           <div class="fh5co-nav-overlay"></div>
@@ -24,10 +26,19 @@
       </div>    
     
       <header id="fh5co-header" role="banner" style="background: #2e2e2e url(../themes/yg_sprint/images/bg.jpg);">
-        <div class="container"> 
-          <a href="{{ path('<front>') }}" id="fh5co-header-logo">
-            <img src="{{ logopath }}" alt="{{ site_name }}" title="{{ 'Home'|t }}">
-          </a>
+        <div> 
+           <!-- new navigation menu -->
+          <div class="new_extanded_navigation_menu">
+            <div class="col-md-4">
+              <a href="{{ path('<front>') }}" id="fh5co-header-logo">
+                <img src="{{ logopath }}" alt="{{ site_name }}" title="{{ 'Home'|t }}">
+              </a>
+            </div>
+            <div class="col-md-8">
+              {{ page.first_nevbar }}
+            </div>
+          </div>
+
           <a href="#" class="fh5co-header-bars js-nav-toggle"><span>Menu&nbsp;&nbsp;&nbsp;</span></a>
           <h1 class="fh5co-header-intro">Devtron Genesis is a house of quality web developmet.</h1>
         </div>

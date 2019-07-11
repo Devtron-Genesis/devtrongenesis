@@ -21,6 +21,10 @@
     // $('.node-22 .views-field-nothing span > .item').matchHeight(); // blogs page
     $('.node-22 .views-field-nothing img').matchHeight();
 
+    $('.navbar-toggler.collapsed').rotate({angle:45});
+
+
+
 
 }); /* End of the document.ready */
 })(jQuery);

@@ -3,11 +3,13 @@ global-styling:
     theme:
       css/style.css: {}
       css/rwd.css: {}
+      css/hc-offcanvas-nav.css: {}
 
 global-js:
   js:
     js/custom.js: {}
     js/jquery.matchHeight-min.js: {}
+    js/hc-offcanvas-nav.js: {}
 
   dependencies:
     - core/drupalSettings

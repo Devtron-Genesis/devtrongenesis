@@ -1,9 +1,65 @@
 /*          *** Custom Style File ***    */
 
 /*    ***  Header  ***  */
+.new_extanded_navigation_menu a#fh5co-header-logo img {
+    width: 170px !important;
+}
+.new_extanded_navigation_menu nav li {
+    display: inline;
+    padding: 0px 20px;
+}
+.new_extanded_navigation_menu {
+    position: relative;
+    z-index: 100;
+}
+nav#block-mainnavigation > ul li {
+    /* width: 100%; */
+    float: left;
+}
+.main_navigation_bar {
+  position: absolute;
+  right: 0px;
+
+}
+.main_navigation_bar button {
+  right: 0px;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+}
+.main_navigation_bar ul li {
+  display: block;
+}
+.main_navigation_bar ul li a {
+  color: black;
+  padding: 5px 0px;
+}
+
+#fh5co-header {
+  padding-top: 10px;
+}
+.main_navigation_bar ul li .glyphicon {
+  font-size: 12px;
+  padding-left: 2px;
+}
+.main_navigation_bar ul li a:hover .glyphicon {
+  color: #4DAB31;
+}
+.navbar-toggler.collapsed img {
+  transform: rotate(180deg);
+}
+
+
+
+
+/** theme default nav bar removed **/
+a.fh5co-header-bars.js-nav-toggle {
+    display: none;
+}
 
 
   /*    ***  Body  ***  */ 
+
 body#outer-page #fh5co-workwithus .fh5co-workwithus-intro {
     padding: 0px;
 }
@@ -202,4 +258,98 @@ footer#fh5co-footer > .container {
 }
 .node-22 footer#fh5co-footer #fh5co-copyright {
     margin-top: -5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menu-link { display: none; }
+
+.spinner-master input[type=checkbox] { display: none; }
+
+
+@media all and (max-width: 768px) {
+
+.spinner-master * {
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.spinner-master {
+  position: relative;
+  margin: 15px;
+  height: 30px;
+  width: 30px;
+  float: left;
+}
+
+.spinner-master label {
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  top: 5px;
+  left: 0;
+}
+
+.spinner-master .spinner {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  padding: 0;
+  background-color: #fff;
+}
+
+.spinner-master .diagonal.part-1 {
+  position: relative;
+  float: left;
+}
+
+.spinner-master .horizontal {
+  position: relative;
+  float: left;
+  margin-top: 4px;
+}
+
+.spinner-master .diagonal.part-2 {
+  position: relative;
+  float: left;
+  margin-top: 4px;
+}
+
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .horizontal { opacity: 0; }
+
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .diagonal.part-1 {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  margin-top: 10px;
+}
+
+.spinner-master input[type=checkbox]:checked ~ .spinner-spin > .diagonal.part-2 {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  margin-top: -12px;
+}
+
 }

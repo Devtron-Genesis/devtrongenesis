@@ -138,6 +138,15 @@
 	.node-22 .scroll-none-front {
 		padding-bottom: 61px !important;
 	}
+	.main_navigation_bar {
+		width: 100%;
+	}
+	.main_navigation_bar ul {
+  		margin-top: 60px;
+  		width: 103%;
+  		background: white;
+  		padding: 20px 10px;
+	}
 }
 @media only screen and (min-width: 768px)
 {
@@ -157,6 +166,13 @@
 	.node-1 p.portfolio_fron_rm {
     	margin-bottom: 43px;
 	}
+	.main_navigation_bar button {
+    	display: none;
+	}
+	.main_navigation_bar ul li a:hover {
+ 		border-bottom: 2px solid #4DAB31;
+	}
+	
 }
 @media only screen and (max-width: 570px)
 {

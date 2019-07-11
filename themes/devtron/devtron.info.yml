@@ -15,6 +15,7 @@ libraries:
 #Regions
 regions:
   header: 'Header'
+  first_nevbar: 'Main navigation menu'
   primary_menu: 'Primary Menu'
   content: 'Content'
   slider: 'Slider'
