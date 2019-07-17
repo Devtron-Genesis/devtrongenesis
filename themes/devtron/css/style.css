@@ -48,6 +48,15 @@ nav#block-mainnavigation > ul li {
 .navbar-toggler.collapsed img {
   transform: rotate(180deg);
 }
+.main_navigation_bar ul li ul {
+  padding: 15px 5px;
+}
+.main_navigation_bar ul li ul li a:hover {
+  border-bottom: none;
+}
+.main_navigation_bar ul li ul li {
+  padding: 5px 20px;
+}
 
 
 
