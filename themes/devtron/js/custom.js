@@ -26,6 +26,9 @@
     $('.field--name-field-related-services > .field__item').addClass('col-md-3');
     $('.field--name-field-related-services > .field__item').matchHeight();
     $('.field--name-field-related-services > .field__item img').matchHeight();
+
+    $('.field--name-field-related-services').prepend('<div class="other-service-heading">----------- <img src="/sites/default/files/2019-07/Services.png" /> <span>Our Other services</span> -----------</div>');
+
    //  var servi_bg_img = $('.field--name-field-banner-image img').attr('src');
   	// $('#fh5co-header').css('background-image', 'url(' + servi_bg_img + ')');
 
