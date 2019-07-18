@@ -12,7 +12,21 @@
   		$('body').addClass('language-nb');
   	}
 
-  	// to remove the current language option from the page.
+
+
+     // Services pages styling 
+    $('.field--name-field-services-sections .paragraph--type--left-image-right-text').addClass('row');
+    $('.field--name-field-left-image').addClass('col-md-6');
+    $('.field--name-field-right-text').addClass('col-md-6');
+
+    $('.field--name-field-services-sections .paragraph--type--left-text-right-image').addClass('row');
+    $('.field--name-field-left-text').addClass('col-md-6');
+    $('.field--name-field-right-image').addClass('col-md-6');
+
+  	
+
+
+    // to remove the current language option from the page.
   	$('.language-en li.en.is-active').hide();
   	$('.language-nb li.nb.is-active').hide();
 

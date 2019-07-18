@@ -221,6 +221,21 @@ div#fh5co-copyright .fh5co-social-container {
     width: 100%;
 }
 
+/**  SErvices Pages ***/
+.field--name-field-banner-image img,
+.field--name-field-right-image img {
+  width: 100%;
+}
+.field--name-field-left-image img {
+  width: 100%;
+}
+.field--name-field-services-sections .row {
+  margin: 50px 0px;
+}
+.paragraph--type--service-pages-center-text {
+  padding: 20px 50px;
+}
+
 /********************
 ******  Footer  *****
 *********************/
