@@ -95,6 +95,7 @@ div#fh5co-journal .views-field h2 {
 }
 footer#fh5co-footer {
     padding-bottom: 0px;
+    clear: both;
 }
 .text-center.fh5co-social-container ul.fh5co-social li {
     margin: 0px 10px;
@@ -242,13 +243,31 @@ div#fh5co-copyright .fh5co-social-container {
 .field--name-field-services-sections image {
   padding: 0px 15px;
 } 
-
-
-
-
-
-
-
+.field--name-field-related-services li.node-readmore {
+  display: none;
+}
+.field--name-field-related-services {
+  text-align: justify;
+  font-size: 16px;
+}
+.field--name-field-related-services h2 {
+  font-size: 18px;
+  font-weight: bold;
+}
+.field--name-field-related-services > .field__item {
+  border: 1px solid #E8E8E8;
+  margin: 0px 10px;
+  text-align: center;
+}
+.field--name-field-related-services > .field__item img {
+  width: 100%;
+}
+.field--name-field-related-services > .field__item:hover {
+  -moz-box-shadow:    3px 4px 10px;
+  -webkit-box-shadow: 3px 4px 10px;
+  box-shadow: 3px 4px 10px;
+  cursor: pointer;
+}
 
 
 
