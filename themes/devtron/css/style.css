@@ -235,6 +235,27 @@ div#fh5co-copyright .fh5co-social-container {
 .paragraph--type--service-pages-center-text {
   padding: 20px 50px;
 }
+.field--name-field-services-sections {
+  text-align: justify;
+}
+.field--name-field-services-sections p,
+.field--name-field-services-sections image {
+  padding: 0px 15px;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /********************
 ******  Footer  *****
