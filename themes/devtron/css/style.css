@@ -263,9 +263,9 @@ div#fh5co-copyright .fh5co-social-container {
   width: 100%;
 }
 .field--name-field-related-services > .field__item:hover {
-  -moz-box-shadow:    3px 4px 10px;
-  -webkit-box-shadow: 3px 4px 10px;
-  box-shadow: 3px 4px 10px;
+  -moz-box-shadow:    2px 2px 8px 1px rgba(184,184,184,.5);
+  -webkit-box-shadow: 2px 2px 8px 1px rgba(184,184,184,.5);
+  box-shadow: 2px 2px 8px 1px rgba(184,184,184,.5);
   cursor: pointer;
 }
 
