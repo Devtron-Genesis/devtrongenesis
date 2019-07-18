@@ -23,10 +23,8 @@
     $('.field--name-field-left-text').addClass('col-md-6');
     $('.field--name-field-right-image').addClass('col-md-6');
 
-    var servi_bg_img = $('.field--name-field-banner-image img').attr('src');
-    console.log(servi_bg_img);
-
-  	$('#fh5co-header').css('background-image', 'url(' + servi_bg_img + ')');
+   //  var servi_bg_img = $('.field--name-field-banner-image img').attr('src');
+  	// $('#fh5co-header').css('background-image', 'url(' + servi_bg_img + ')');
 
 
     // to remove the current language option from the page.
