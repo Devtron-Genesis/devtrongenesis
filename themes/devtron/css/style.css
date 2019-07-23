@@ -226,12 +226,18 @@ div#fh5co-copyright .fh5co-social-container {
 .field--name-field-banner-image img {
   width: 100%;
 }
+.field--name-field-right-image {
+  text-align: center;
+}
 .field--name-field-right-image img {
-  width: 100%;
+  width: 80%;
   max-height: 350px;
 }
+.field--name-field-left-image {
+  text-align: center;
+}
 .field--name-field-left-image img {
-  width: 100%;
+  width: 80%;
   max-height: 350px;
 }
 .field--name-field-services-sections .row {
