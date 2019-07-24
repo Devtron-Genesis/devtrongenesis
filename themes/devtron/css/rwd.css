@@ -11,6 +11,12 @@
 	.our_services_main a.fh5co-main.custom-btn {
     	margin-top: 12.8% !important;;
 	}
+	.main_navigation_bar {
+		right: unset;
+	}
+
+
+
 }
 @media only screen and (min-width: 1300px) 
 {
@@ -30,6 +36,8 @@
     .node-23 .contact_us_main p:nth-child(4) {
 		clear: inherit;
     }
+
+
 }
 @media only screen and (min-width: 1024px)
 {
