@@ -294,7 +294,9 @@ div#fh5co-copyright .fh5co-social-container {
   width: 95%;
   margin: 0 auto;
 }
-
+.field--name-field-related-services > .field__item {
+  width: 23%;
+}
 /********************
 ******  Footer  *****
 *********************/
