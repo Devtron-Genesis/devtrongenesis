@@ -178,6 +178,12 @@
 	.field--name-field-related-services .other-service-heading {
 		font-size: 12px;
 	}
+	.field--name-field-right-image img {
+    	width: 100%;
+	}
+	.field--name-field-left-image img {
+    	width: 100%;
+	}
 
 }
 @media only screen and (min-width: 768px)
