@@ -266,7 +266,7 @@ div#fh5co-copyright .fh5co-social-container {
 }
 .field--name-field-related-services > .field__item {
   border: 1px solid #E8E8E8;
-  margin: 0px 10px;
+  margin: 0px 10px 20px 10px;
   text-align: center;
   border-radius: 10px;
 }
@@ -294,7 +294,6 @@ div#fh5co-copyright .fh5co-social-container {
   width: 95%;
   margin: 0 auto;
 }
-
 
 /********************
 ******  Footer  *****
