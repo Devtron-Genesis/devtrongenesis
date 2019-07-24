@@ -290,7 +290,10 @@ div#fh5co-copyright .fh5co-social-container {
 .field--name-field-related-services .other-service-heading span {
   font-weight: bold;
 }
-
+.why-dg-block-main {
+  width: 95%;
+  margin: 0 auto;
+}
 
 
 /********************
