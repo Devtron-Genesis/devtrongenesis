@@ -23,7 +23,7 @@
     $('.field--name-field-left-text').addClass('col-md-6');
     $('.field--name-field-right-image').addClass('col-md-6');
 
-    $('.field--name-field-related-services > .field__item').addClass('col-md-3');
+    $('.field--name-field-related-services > .field__item').addClass('col-md-3 col-sm-6');
     $('.field--name-field-related-services > .field__item').matchHeight();
     $('.field--name-field-related-services > .field__item img').matchHeight();
 
