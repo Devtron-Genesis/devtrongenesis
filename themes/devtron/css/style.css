@@ -297,6 +297,18 @@ div#fh5co-copyright .fh5co-social-container {
 .field--name-field-related-services > .field__item {
   width: 23%;
 }
+.paragraph--type--left-text-right-image .field--name-field-left-text ul {
+  padding-left: 15px;
+}
+.paragraph--type--left-text-right-image .field--name-field-left-text ul li {
+  list-style: none;
+}
+
+
+
+
+
+
 /********************
 ******  Footer  *****
 *********************/
