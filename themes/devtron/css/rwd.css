@@ -69,6 +69,9 @@
 	.field--name-field-related-services > .field__item {
 		width: 45%;
 	}
+	.field--name-field-services-sections.field--type-entity-reference-revisions div:nth-child(3) {
+    	display: none;
+	}
 
 }
 @media only screen and (max-width: 768px)
