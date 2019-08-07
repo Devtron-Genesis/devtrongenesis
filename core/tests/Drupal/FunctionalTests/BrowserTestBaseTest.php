@@ -114,7 +114,6 @@ class BrowserTestBaseTest extends BrowserTestBase {
 
     // Test drupalPostForm().
     $edit = ['bananas' => 'red'];
-    // Submit the form using the button label.
     $result = $this->drupalPostForm('form-test/object-builder', $edit, 'Save');
     $this->assertSame($this->getSession()->getPage()->getContent(), $result);
     $value = $config_factory->get('form_test.object')->get('bananas');
@@ -123,20 +122,6 @@ class BrowserTestBaseTest extends BrowserTestBase {
     $this->drupalPostForm('form-test/object-builder', NULL, 'Save');
     $value = $config_factory->get('form_test.object')->get('bananas');
     $this->assertSame('', $value);
-
-    // Submit the form using the button id.
-    $edit = ['bananas' => 'blue'];
-    $result = $this->drupalPostForm('form-test/object-builder', $edit, 'edit-submit');
-    $this->assertSame($this->getSession()->getPage()->getContent(), $result);
-    $value = $config_factory->get('form_test.object')->get('bananas');
-    $this->assertSame('blue', $value);
-
-    // Submit the form using the button name.
-    $edit = ['bananas' => 'purple'];
-    $result = $this->drupalPostForm('form-test/object-builder', $edit, 'op');
-    $this->assertSame($this->getSession()->getPage()->getContent(), $result);
-    $value = $config_factory->get('form_test.object')->get('bananas');
-    $this->assertSame('purple', $value);
 
     // Test drupalPostForm() with no-html response.
     $values = Json::decode($this->drupalPostForm('form_test/form-state-values-clean', [], t('Submit')));
@@ -474,6 +459,9 @@ class BrowserTestBaseTest extends BrowserTestBase {
       $this->pass($e->getMessage());
     }
 
+    // Test \Drupal\FunctionalTests\AssertLegacyTrait::getAllOptions.
+    $this->drupalGet('/form-test/select');
+    $this->assertCount(6, $this->getAllOptions($this->cssSelect('select[name="opt_groups"]')[0]));
   }
 
   /**
@@ -588,7 +576,7 @@ class BrowserTestBaseTest extends BrowserTestBase {
     $this->assertFieldChecked('edit-checkbox-enabled');
     $this->assertNoFieldChecked('edit-checkbox-disabled');
 
-    // Test that the assertion fails correctly with non-existent field id.
+    // Test that the assertion fails correctly with non-existant field id.
     try {
       $this->assertNoFieldChecked('incorrect_checkbox_id');
       $this->fail('The "incorrect_checkbox_id" field was found');
@@ -641,20 +629,14 @@ class BrowserTestBaseTest extends BrowserTestBase {
    * Tests the assumption that local time is in 'Australia/Sydney'.
    */
   public function testLocalTimeZone() {
-    $expected = 'Australia/Sydney';
     // The 'Australia/Sydney' time zone is set in core/tests/bootstrap.php
-    $this->assertEquals($expected, date_default_timezone_get());
+    $this->assertEquals('Australia/Sydney', date_default_timezone_get());
 
     // The 'Australia/Sydney' time zone is also set in
     // FunctionalTestSetupTrait::initConfig().
     $config_factory = $this->container->get('config.factory');
     $value = $config_factory->get('system.date')->get('timezone.default');
-    $this->assertEquals($expected, $value);
-
-    // Test that users have the correct time zone set.
-    $this->assertEquals($expected, $this->rootUser->getTimeZone());
-    $admin_user = $this->drupalCreateUser(['administer site configuration']);
-    $this->assertEquals($expected, $admin_user->getTimeZone());
+    $this->assertEquals('Australia/Sydney', $value);
   }
 
   /**
@@ -688,23 +670,6 @@ class BrowserTestBaseTest extends BrowserTestBase {
     $this->setExpectedException(\InvalidArgumentException::class, 'The module demo_umami_content does not exist.');
     $this->assertFileExists('core/profiles/demo_umami/modules/demo_umami_content/demo_umami_content.info.yml');
     \Drupal::service('extension.list.module')->getPathname('demo_umami_content');
-  }
-
-  /**
-   * Test the protections provided by .htkey.
-   */
-  public function testHtkey() {
-    // Remove the Simpletest private key file so we can test the protection
-    // against requests that forge a valid testing user agent to gain access
-    // to the installer.
-    // @see drupal_valid_test_ua()
-    // Not using File API; a potential error must trigger a PHP warning.
-    $install_url = Url::fromUri('base:core/install.php', ['external' => TRUE, 'absolute' => TRUE])->toString();
-    $this->drupalGet($install_url);
-    $this->assertSession()->statusCodeEquals(200);
-    unlink($this->siteDirectory . '/.htkey');
-    $this->drupalGet($install_url);
-    $this->assertSession()->statusCodeEquals(403);
   }
 
 }

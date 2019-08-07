@@ -28,7 +28,7 @@ abstract class FileLoader extends BaseFileLoader
 {
     protected $container;
     protected $isLoadingInstanceof = false;
-    protected $instanceof = [];
+    protected $instanceof = array();
 
     public function __construct(ContainerBuilder $container, FileLocatorInterface $locator)
     {
@@ -57,8 +57,8 @@ abstract class FileLoader extends BaseFileLoader
         $classes = $this->findClasses($namespace, $resource, $exclude);
         // prepare for deep cloning
         $serializedPrototype = serialize($prototype);
-        $interfaces = [];
-        $singlyImplemented = [];
+        $interfaces = array();
+        $singlyImplemented = array();
 
         foreach ($classes as $class => $errorMessage) {
             if (interface_exists($class, false)) {
@@ -91,8 +91,6 @@ abstract class FileLoader extends BaseFileLoader
      */
     protected function setDefinition($id, Definition $definition)
     {
-        $this->container->addRemovedBindingIds($id);
-
         if ($this->isLoadingInstanceof) {
             if (!$definition instanceof ChildDefinition) {
                 throw new InvalidArgumentException(sprintf('Invalid type definition "%s": ChildDefinition expected, "%s" given.', $id, \get_class($definition)));
@@ -107,7 +105,7 @@ abstract class FileLoader extends BaseFileLoader
     {
         $parameterBag = $this->container->getParameterBag();
 
-        $excludePaths = [];
+        $excludePaths = array();
         $excludePrefix = null;
         if ($excludePattern) {
             $excludePattern = $parameterBag->unescapeValue($parameterBag->resolveValue($excludePattern));
@@ -122,7 +120,7 @@ abstract class FileLoader extends BaseFileLoader
         }
 
         $pattern = $parameterBag->unescapeValue($parameterBag->resolveValue($pattern));
-        $classes = [];
+        $classes = array();
         $extRegexp = \defined('HHVM_VERSION') ? '/\\.(?:php|hh)$/' : '/\\.php$/';
         $prefixLen = null;
         foreach ($this->glob($pattern, true, $resource) as $path => $info) {

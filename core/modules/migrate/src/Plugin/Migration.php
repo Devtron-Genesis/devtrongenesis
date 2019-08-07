@@ -216,7 +216,7 @@ class Migration extends PluginBase implements MigrationInterface, RequirementsIn
   protected $sourcePluginManager;
 
   /**
-   * The process plugin manager.
+   * Thep process plugin manager.
    *
    * @var \Drupal\migrate\Plugin\MigratePluginManager
    */
@@ -327,7 +327,6 @@ class Migration extends PluginBase implements MigrationInterface, RequirementsIn
    * @see https://www.drupal.org/node/2873795
    */
   public function get($property) {
-    @trigger_error('\Drupal\migrate\Plugin\Migration::get() is deprecated in Drupal 8.1.x, will be removed before Drupal 9.0.x. Use more specific getters instead. See https://www.drupal.org/node/2873795', E_USER_DEPRECATED);
     return isset($this->$property) ? $this->$property : NULL;
   }
 

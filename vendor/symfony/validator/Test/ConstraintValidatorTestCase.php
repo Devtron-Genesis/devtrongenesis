@@ -29,8 +29,6 @@ use Symfony\Component\Validator\Mapping\PropertyMetadata;
  */
 abstract class ConstraintValidatorTestCase extends TestCase
 {
-    use TestCaseSetUpTearDownTrait;
-
     /**
      * @var ExecutionContextInterface
      */
@@ -50,7 +48,7 @@ abstract class ConstraintValidatorTestCase extends TestCase
     protected $constraint;
     protected $defaultTimezone;
 
-    private function doSetUp()
+    protected function setUp()
     {
         $this->group = 'MyGroup';
         $this->metadata = null;
@@ -72,7 +70,7 @@ abstract class ConstraintValidatorTestCase extends TestCase
         $this->setDefaultTimezone('UTC');
     }
 
-    private function doTearDown()
+    protected function tearDown()
     {
         $this->restoreDefaultTimezone();
     }
@@ -177,7 +175,7 @@ abstract class ConstraintValidatorTestCase extends TestCase
             ->will($this->returnValue($validator));
         $validator->expects($this->at(2 * $i + 1))
             ->method('validate')
-            ->with($value, $this->logicalOr(null, [], $this->isInstanceOf('\Symfony\Component\Validator\Constraints\Valid')), $group);
+            ->with($value, $this->logicalOr(null, array(), $this->isInstanceOf('\Symfony\Component\Validator\Constraints\Valid')), $group);
     }
 
     protected function expectValidateValueAt($i, $propertyPath, $value, $constraints, $group = null)
@@ -226,7 +224,7 @@ class ConstraintViolationAssertion
     private $assertions;
 
     private $message;
-    private $parameters = [];
+    private $parameters = array();
     private $invalidValue = 'InvalidValue';
     private $propertyPath = 'property.path';
     private $plural;
@@ -234,7 +232,7 @@ class ConstraintViolationAssertion
     private $constraint;
     private $cause;
 
-    public function __construct(ExecutionContextInterface $context, $message, Constraint $constraint = null, array $assertions = [])
+    public function __construct(ExecutionContextInterface $context, $message, Constraint $constraint = null, array $assertions = array())
     {
         $this->context = $context;
         $this->message = $message;
@@ -308,7 +306,7 @@ class ConstraintViolationAssertion
 
     public function assertRaised()
     {
-        $expected = [];
+        $expected = array();
         foreach ($this->assertions as $assertion) {
             $expected[] = $assertion->getViolation();
         }

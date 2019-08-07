@@ -216,10 +216,6 @@ class NodeViewsData extends EntityViewsData {
     $data['node_field_revision']['nid']['relationship']['base field'] = 'nid';
     $data['node_field_revision']['nid']['relationship']['title'] = $this->t('Content');
     $data['node_field_revision']['nid']['relationship']['label'] = $this->t('Get the actual content from a content revision.');
-    $data['node_field_revision']['nid']['relationship']['extra'][] = [
-      'field' => 'langcode',
-      'left_field' => 'langcode',
-    ];
 
     $data['node_field_revision']['vid'] = [
       'argument' => [
@@ -232,12 +228,6 @@ class NodeViewsData extends EntityViewsData {
         'base field' => 'vid',
         'title' => $this->t('Content'),
         'label' => $this->t('Get the actual content from a content revision.'),
-        'extra' => [
-          [
-            'field' => 'langcode',
-            'left_field' => 'langcode',
-          ],
-        ],
       ],
     ] + $data['node_field_revision']['vid'];
 
@@ -247,6 +237,9 @@ class NodeViewsData extends EntityViewsData {
     $data['node_revision']['revision_uid']['relationship']['label'] = $this->t('revision user');
 
     $data['node_field_revision']['table']['wizard_id'] = 'node_field_revision';
+
+    $data['node_field_revision']['table']['join']['node_field_data']['left_field'] = 'vid';
+    $data['node_field_revision']['table']['join']['node_field_data']['field'] = 'vid';
 
     $data['node_field_revision']['status']['filter']['label'] = $this->t('Published');
     $data['node_field_revision']['status']['filter']['type'] = 'yes-no';

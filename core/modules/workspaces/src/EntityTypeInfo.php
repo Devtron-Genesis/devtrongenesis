@@ -70,18 +70,4 @@ class EntityTypeInfo implements ContainerInjectionInterface {
     }
   }
 
-  /**
-   * Alters field plugin definitions.
-   *
-   * @param array[] $definitions
-   *   An array of field plugin definitions.
-   *
-   * @see hook_field_info_alter()
-   */
-  public function fieldInfoAlter(&$definitions) {
-    if (isset($definitions['entity_reference'])) {
-      $definitions['entity_reference']['constraints']['EntityReferenceSupportedNewEntities'] = [];
-    }
-  }
-
 }

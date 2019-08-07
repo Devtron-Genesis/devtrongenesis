@@ -86,13 +86,16 @@ class UrlResolver implements UrlResolverInterface {
    *
    * @return string|bool
    *   URL of the oEmbed endpoint, or FALSE if the discovery was unsuccessful.
+   *
+   * @throws \Drupal\media\OEmbed\ResourceException
+   *   If the resource cannot be retrieved.
    */
   protected function discoverResourceUrl($url) {
     try {
       $response = $this->httpClient->get($url);
     }
     catch (RequestException $e) {
-      return FALSE;
+      throw new ResourceException('Could not fetch oEmbed resource.', $url, [], $e);
     }
 
     $document = Html::load((string) $response->getBody());

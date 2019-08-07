@@ -4,11 +4,8 @@ namespace Drupal\image\Entity;
 
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Config\Entity\ConfigEntityBase;
-use Drupal\Core\Entity\Entity\EntityFormDisplay;
 use Drupal\Core\Entity\EntityStorageInterface;
 use Drupal\Core\Entity\EntityWithPluginCollectionInterface;
-use Drupal\Core\File\Exception\FileException;
-use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Routing\RequestHelper;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\Url;
@@ -157,7 +154,7 @@ class ImageStyle extends ConfigEntityBase implements ImageStyleInterface, Entity
           }
         }
       }
-      foreach (EntityFormDisplay::loadMultiple() as $display) {
+      foreach (EntityViewDisplay::loadMultiple() as $display) {
         foreach ($display->getComponents() as $name => $options) {
           if (isset($options['type']) && $options['type'] == 'image_image' && $options['settings']['preview_image_style'] == $style->getOriginalId()) {
             $options['settings']['preview_image_style'] = $style->id();
@@ -253,17 +250,10 @@ class ImageStyle extends ConfigEntityBase implements ImageStyleInterface, Entity
    */
   public function flush($path = NULL) {
     // A specific image path has been provided. Flush only that derivative.
-    /** @var \Drupal\Core\File\FileSystemInterface $file_system */
-    $file_system = \Drupal::service('file_system');
     if (isset($path)) {
       $derivative_uri = $this->buildUri($path);
       if (file_exists($derivative_uri)) {
-        try {
-          $file_system->delete($derivative_uri);
-        }
-        catch (FileException $e) {
-          // Ignore failed deletes.
-        }
+        file_unmanaged_delete($derivative_uri);
       }
       return $this;
     }
@@ -272,12 +262,7 @@ class ImageStyle extends ConfigEntityBase implements ImageStyleInterface, Entity
     $wrappers = $this->getStreamWrapperManager()->getWrappers(StreamWrapperInterface::WRITE_VISIBLE);
     foreach ($wrappers as $wrapper => $wrapper_data) {
       if (file_exists($directory = $wrapper . '://styles/' . $this->id())) {
-        try {
-          $file_system->deleteRecursive($directory);
-        }
-        catch (FileException $e) {
-          // Ignore failed deletes.
-        }
+        file_unmanaged_delete_recursive($directory);
       }
     }
 
@@ -304,10 +289,10 @@ class ImageStyle extends ConfigEntityBase implements ImageStyleInterface, Entity
     }
 
     // Get the folder for the final location of this style.
-    $directory = \Drupal::service('file_system')->dirname($derivative_uri);
+    $directory = drupal_dirname($derivative_uri);
 
     // Build the destination folder tree if it doesn't already exist.
-    if (!\Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS)) {
+    if (!file_prepare_directory($directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
       \Drupal::logger('image')->error('Failed to create style directory: %directory', ['%directory' => $directory]);
       return FALSE;
     }
