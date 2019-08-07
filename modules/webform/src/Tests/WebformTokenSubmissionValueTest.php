@@ -44,9 +44,15 @@ class WebformTokenSubmissionValueTest extends WebformTestBase {
     // Check anonymous token handling.
     $this->postSubmission($webform);
     $tokens = [
+      // Element.
+      'webform:element:email' => 'email',
+      'webform:element:email:title' => 'email',
+      'webform:element:email:description' => '<em>This is an email address</em>',
+      'webform:element:not_element:description' => '[webform:element:not_element:description]',
+      'webform:element:email:not_property' => '[webform:element:email:not_property]',
+
       // Emails.
       'webform_submission:values:email' => 'example@example.com',
-      'webform_submission:values:email:urlencode' => 'example%40example.com',
       'webform_submission:values:emails:0' => 'one@example.com',
       'webform_submission:values:emails:1' => 'two@example.com',
       'webform_submission:values:emails:2' => 'three@example.com',
@@ -104,7 +110,6 @@ john@example.com',
       'webform_submission:values:contacts:0:name' => 'John Smith',
       'webform_submission:values:contacts:1:name' => 'Jane Doe',
       'webform_submission:values:contacts:0:email:html' => '<a href="mailto:john@example.com">john@example.com</a>',
-      'webform_submission:values:contacts:0:email:urlencode' => 'john%40example.com',
       'webform_submission:values:contacts:1:email:raw:html' => 'jane@example.com',
 
       // Containers.
@@ -113,7 +118,6 @@ john@example.com',
 first_name: John
 last_name: Smith
 </pre>',
-      'webform_submission:values:fieldset:urlencode' => 'fieldset%0A--------%0Afirst_name%3A+John%0Alast_name%3A+Smith%0A',
 
       // Submission limits.
       'webform_submission:limit:webform' => '100',
@@ -130,6 +134,17 @@ last_name: Smith
       'webform_submission:values:missing:clear' => '',
       'webform:random:missing' => '[webform:random:missing]',
       'webform:random:missing:clear' => '',
+
+      // HTML decode.
+      'webform_submission:values:markup' => '&lt;b&gt;Bold&lt;/b&gt; &amp;amp; UPPERCASE',
+      'webform_submission:values:markup:htmldecode' => '<b>Bold</b> &amp; UPPERCASE',
+      'webform_submission:values:markup:htmldecode:striptags' => 'Bold &amp; UPPERCASE',
+      'webform_submission:values:script' => '&lt;script&gt;alert(&#039;hi&#039;);&lt;/script&gt;',
+      'webform_submission:values:script:htmldecode' => 'alert(&#039;hi&#039;);',
+
+      // URL encode.
+      'webform_submission:values:url' => 'http://example.com?query=param',
+      'webform_submission:values:url:urlencode' => 'http%3A%2F%2Fexample.com%3Fquery%3Dparam',
     ];
     foreach ($tokens as $token => $value) {
       $this->assertRaw("<tr><th width=\"50%\">$token</th><td width=\"50%\">$value</td></tr>");
@@ -138,8 +153,8 @@ last_name: Smith
     // Check containers.
     $this->assertRaw('<tr><th width="50%">webform_submission:values:fieldset</th><td width="50%"><pre>fieldset');
     $this->assertRaw('<tr><th width="50%">webform_submission:values:fieldset:html</th><td width="50%"><fieldset class="webform-container webform-container-type-fieldset js-form-item form-item js-form-wrapper form-wrapper" id="test_token_submission_value--fieldset">');
-    $this->assertRaw('<tr><th width="50%">webform_submission:values:fieldset:header:html</th><td width="50%"><section id="test_token_submission_value--fieldset" class="js-form-item form-item js-form-wrapper form-wrapper webform-section">');
-    $this->assertRaw('<tr><th width="50%">webform_submission:values:fieldset:details:html</th><td width="50%"><details data-webform-element-id="test_token_submission_value--fieldset" class="webform-container webform-container-type-details js-form-wrapper form-wrapper" id="test_token_submission_value--fieldset" open="open">');
+    $this->assertRaw('<tr><th width="50%">webform_submission:values:fieldset:header:html</th><td width="50%"><section class="js-form-item form-item js-form-wrapper form-wrapper webform-section" id="test_token_submission_value--fieldset">');
+    $this->assertRaw('<tr><th width="50%">webform_submission:values:fieldset:details:html</th><td width="50%"><details class="webform-container webform-container-type-details js-form-wrapper form-wrapper" data-webform-element-id="test_token_submission_value--fieldset" id="test_token_submission_value--fieldset" open="open">');
     $this->assertRaw('<tr><th width="50%">webform_submission:values:fieldset:fieldset:html</th><td width="50%"><fieldset class="webform-container webform-container-type-fieldset js-form-item form-item js-form-wrapper form-wrapper" id="test_token_submission_value--fieldset">');
 
     // Check authenticated token handling.
