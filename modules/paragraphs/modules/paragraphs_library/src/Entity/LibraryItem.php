@@ -86,7 +86,7 @@ class LibraryItem extends EditorialContentEntityBase implements LibraryItemInter
         'label' => 'hidden',
       ])
       ->setDisplayOptions('form', [
-        'type' => 'string',
+        'type' => 'string_textfield',
         'weight' => -5,
       ])
       ->setRequired(TRUE)
@@ -282,8 +282,8 @@ class LibraryItem extends EditorialContentEntityBase implements LibraryItemInter
    * @return string
    */
   protected static function buildLabel(ParagraphInterface $paragraph) {
-    $summary = $paragraph->getSummary(['show_behavior_summary' => FALSE]);
-    $summary = Unicode::truncate($summary, 50);
+    $summary = $paragraph->getSummaryItems(['show_behavior_summary' => FALSE]);
+    $summary = Unicode::truncate(implode(', ', $summary['content']), 50);
     return $paragraph->getParagraphType()->label() . ': ' . $summary;
   }
 
