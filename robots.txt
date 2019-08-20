@@ -61,4 +61,4 @@ Disallow: /index.php/user/login/
 Disallow: /index.php/user/logout/
 
 # Sitemap files
-Sitemap: https://www.devtrongenesys.com/sitemap.xml
+Sitemap: http://devtrongenesys.com/sitemap.xml
