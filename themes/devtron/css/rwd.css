@@ -173,7 +173,7 @@
 	}
 
 	.field--name-field-related-services .other-service-heading img {
-    	width: 30px;
+    	display: none;
 	}
 	.field--name-field-related-services .other-service-heading {
 		font-size: 12px;
