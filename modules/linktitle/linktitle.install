@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_post_update_NAME().
+ */
+
+ /**
+  * WARNING: The update to alpha5 will break all text editors. Disable the Linktitle-option in all text editors or disable the module before updating the code.
+  */
+
+  function linktitle_post_update_warning(&$sandbox) {
+   return;
+ }
