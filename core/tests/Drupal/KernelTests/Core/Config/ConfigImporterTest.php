@@ -49,7 +49,8 @@ class ConfigImporterTest extends KernelTestBase {
     // Set up the ConfigImporter object for testing.
     $storage_comparer = new StorageComparer(
       $this->container->get('config.storage.sync'),
-      $this->container->get('config.storage')
+      $this->container->get('config.storage'),
+      $this->container->get('config.manager')
     );
     $this->configImporter = new ConfigImporter(
       $storage_comparer->createChangelist(),
@@ -622,7 +623,7 @@ class ConfigImporterTest extends KernelTestBase {
       }
     }
 
-    // Make a config entity have multiple unmet dependencies.
+    // Make a config entity have mulitple unmet dependencies.
     $config_entity_data = $sync->read('config_test.dynamic.dotted.default');
     $config_entity_data['dependencies'] = ['module' => ['unknown', 'dblog']];
     $sync->write('config_test.dynamic.dotted.module', $config_entity_data);
@@ -847,7 +848,7 @@ class ConfigImporterTest extends KernelTestBase {
   }
 
   /**
-   * Helper method to test custom config installer steps.
+   * Helper meothd to test custom config installer steps.
    *
    * @param array $context
    *   Batch context.

@@ -113,8 +113,7 @@ class Node extends FieldableEntity {
     // The translations will be migrated by the d7_node_entity_translation
     // migration.
     $entity_translatable = $this->isEntityTranslatable('node') && (int) $this->variableGet('language_content_type_' . $type, 0) === 4;
-    $source_language = $this->getEntityTranslationSourceLanguage('node', $nid);
-    $language = $entity_translatable && $source_language ? $source_language : $row->getSourceProperty('language');
+    $language = $entity_translatable ? $this->getEntityTranslationSourceLanguage('node', $nid) : $row->getSourceProperty('language');
 
     // Get Field API field values.
     foreach ($this->getFields('node', $type) as $field_name => $field) {

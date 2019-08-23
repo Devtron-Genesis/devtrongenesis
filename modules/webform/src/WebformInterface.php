@@ -176,14 +176,6 @@ interface WebformInterface extends ConfigEntityInterface, EntityWithPluginCollec
   public function hasAttachments();
 
   /**
-   * Determine if the webform's elements include computed values.
-   *
-   * @return bool
-   *   TRUE if the webform's elements include computed values.
-   */
-  public function hasComputed();
-
-  /**
    * Determine if the webform is using a Flexbox layout.
    *
    * @return bool
@@ -719,20 +711,12 @@ interface WebformInterface extends ConfigEntityInterface, EntityWithPluginCollec
   public function getElementsManagedFiles();
 
   /**
-   * Get webform attachment elements.
+   * Get webform attachemnt elements.
    *
    * @return array
    *   Webform attachment elements.
    */
   public function getElementsAttachments();
-
-  /**
-   * Get webform computed elements.
-   *
-   * @return array
-   *   Webform computed elements.
-   */
-  public function getElementsComputed();
 
   /**
    * Get webform element's selectors as options.

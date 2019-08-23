@@ -326,4 +326,4 @@
 
   // Expose constructor in the public space.
   Drupal.TableHeader = TableHeader;
-})(jQuery, Drupal, window.Drupal.displace);
+})(jQuery, Drupal, window.parent.Drupal.displace);

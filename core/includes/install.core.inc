@@ -15,7 +15,6 @@ use Drupal\Core\Config\StorageComparer;
 use Drupal\Core\DrupalKernel;
 use Drupal\Core\Database\Database;
 use Drupal\Core\Database\DatabaseExceptionWrapper;
-use Drupal\Core\File\FileSystemInterface;
 use Drupal\Core\Form\FormState;
 use Drupal\Core\Installer\Exception\AlreadyInstalledException;
 use Drupal\Core\Installer\Exception\InstallerException;
@@ -102,6 +101,14 @@ const INSTALL_TASK_RUN_IF_NOT_COMPLETED = 3;
  * @see install_state_defaults()
  */
 function install_drupal($class_loader, $settings = [], callable $callback = NULL) {
+  // Support the old way of calling this function with just a settings array.
+  // @todo Remove this when Drush is updated in the Drupal testing
+  //   infrastructure in https://www.drupal.org/node/2389243
+  if (is_array($class_loader) && $settings === []) {
+    $settings = $class_loader;
+    $class_loader = require __DIR__ . '/../../autoload.php';
+  }
+
   global $install_state;
   // Initialize the installation state with the settings that were passed in,
   // as well as a boolean indicating whether or not this is an interactive
@@ -146,8 +153,8 @@ function install_drupal($class_loader, $settings = [], callable $callback = NULL
   // next page.
   if ($state['interactive']) {
     // If a session has been initiated in this request, make sure to save it.
-    if (\Drupal::request()->hasSession()) {
-      \Drupal::request()->getSession()->save();
+    if ($session = \Drupal::request()->getSession()) {
+      $session->save();
     }
     if ($state['parameters_changed']) {
       // Redirect to the correct page if the URL parameters have changed.
@@ -658,8 +665,8 @@ function install_run_task($task, &$install_state) {
       $url = Url::fromUri('base:install.php', ['query' => $install_state['parameters'], 'script' => '']);
       $response = batch_process($url, clone $url);
       if ($response instanceof Response) {
-        if (\Drupal::request()->hasSession()) {
-          \Drupal::request()->getSession()->save();
+        if ($session = \Drupal::request()->getSession()) {
+          $session->save();
         }
         // Send the response.
         $response->send();
@@ -1107,7 +1114,7 @@ function install_base_system(&$install_state) {
     // configurable. The temporary directory needs to match what is set in each
     // test types ::prepareEnvironment() step.
     $temporary_directory = dirname(PublicStream::basePath()) . '/temp';
-    \Drupal::service('file_system')->prepareDirectory($temporary_directory, FileSystemInterface::MODIFY_PERMISSIONS | FileSystemInterface::CREATE_DIRECTORY);
+    file_prepare_directory($temporary_directory, FILE_MODIFY_PERMISSIONS | FILE_CREATE_DIRECTORY);
     \Drupal::configFactory()->getEditable('system.file')
       ->set('path.temporary', $temporary_directory)
       ->save();
@@ -1263,19 +1270,12 @@ function install_select_profile(&$install_state) {
 /**
  * Determines the installation profile to use in the installer.
  *
- * Depending on the context from which it's being called, this method
- * may be used to:
- * - Automatically select a profile under certain conditions.
- * - Indicate which profile has already been selected.
- * - Indicate that a profile still needs to be selected.
- *
- * A profile will be selected automatically if one of the following conditions
- * is met. They are checked in the given order:
+ * A profile will be selected in the following order of conditions:
  * - Only one profile is available.
  * - A specific profile name is requested in installation parameters:
  *   - For interactive installations via request query parameters.
  *   - For non-interactive installations via install_drupal() settings.
- * - One of the available profiles is a distribution. If multiple profiles are
+ * - A discovered profile that is a distribution. If multiple profiles are
  *   distributions, then the first discovered profile will be selected.
  * - Only one visible profile is available.
  *
@@ -1283,37 +1283,35 @@ function install_select_profile(&$install_state) {
  *   The current installer state, containing a 'profiles' key, which is an
  *   associative array of profiles with the machine-readable names as keys.
  *
- * @return string|null
+ * @return
  *   The machine-readable name of the selected profile or NULL if no profile was
  *   selected.
- *
- *  @see install_select_profile()
  */
 function _install_select_profile(&$install_state) {
-  // If there is only one profile available it will always be the one selected.
+  // Don't need to choose profile if only one available.
   if (count($install_state['profiles']) == 1) {
     return key($install_state['profiles']);
   }
-  // If a valid profile has already been selected, return the selection.
   if (!empty($install_state['parameters']['profile'])) {
     $profile = $install_state['parameters']['profile'];
     if (isset($install_state['profiles'][$profile])) {
       return $profile;
     }
   }
-  // If any of the profiles are distribution profiles, return the first one.
+  // Check for a distribution profile.
   foreach ($install_state['profiles'] as $profile) {
     $profile_info = install_profile_info($profile->getName());
     if (!empty($profile_info['distribution'])) {
       return $profile->getName();
     }
   }
+
   // Get all visible (not hidden) profiles.
   $visible_profiles = array_filter($install_state['profiles'], function ($profile) {
     $profile_info = install_profile_info($profile->getName());
     return !isset($profile_info['hidden']) || !$profile_info['hidden'];
   });
-  // If there is only one visible profile, return it.
+
   if (count($visible_profiles) == 1) {
     return (key($visible_profiles));
   }
@@ -1444,11 +1442,9 @@ function install_download_translation(&$install_state) {
  */
 function install_retrieve_file($uri, $destination) {
   $parsed_url = parse_url($uri);
-  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
-  $file_system = \Drupal::service('file_system');
-  if (is_dir($file_system->realpath($destination))) {
+  if (is_dir(\Drupal::service('file_system')->realpath($destination))) {
     // Prevent URIs with triple slashes when gluing parts together.
-    $path = str_replace('///', '//', "$destination/") . $file_system->basename($parsed_url['path']);
+    $path = str_replace('///', '//', "$destination/") . drupal_basename($parsed_url['path']);
   }
   else {
     $path = $destination;
@@ -1918,12 +1914,9 @@ function install_check_translations($langcode, $server_pattern) {
   $online = FALSE;
 
   // First attempt to create or make writable the files directory.
-  /** @var \Drupal\Core\File\FileSystemInterface $file_system */
-  $file_system = \Drupal::service('file_system');
-  $file_system->prepareDirectory($files_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
-
+  file_prepare_directory($files_directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
   // Then, attempt to create or make writable the translations directory.
-  $file_system->prepareDirectory($translations_directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+  file_prepare_directory($translations_directory, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS);
 
   // Get values so the requirements errors can be specific.
   if (drupal_verify_install_file($translations_directory, FILE_EXIST, 'dir')) {
@@ -2336,12 +2329,13 @@ function install_config_import_batch() {
   \Drupal::configFactory()->getEditable('system.site')->set('uuid', $system_site['uuid'])->save();
 
   // Create the storage comparer and the config importer.
-  $storage_comparer = new StorageComparer($sync, \Drupal::service('config.storage'));
+  $config_manager = \Drupal::service('config.manager');
+  $storage_comparer = new StorageComparer($sync, \Drupal::service('config.storage'), $config_manager);
   $storage_comparer->createChangelist();
   $config_importer = new ConfigImporter(
     $storage_comparer,
     \Drupal::service('event_dispatcher'),
-    \Drupal::service('config.manager'),
+    $config_manager,
     \Drupal::service('lock.persistent'),
     \Drupal::service('config.typed'),
     \Drupal::service('module_handler'),
@@ -2406,13 +2400,14 @@ function install_config_download_translations(&$install_state) {
 function install_config_revert_install_changes() {
   global $install_state;
 
-  $storage_comparer = new StorageComparer(\Drupal::service('config.storage.sync'), \Drupal::service('config.storage'));
+  $config_manager = \Drupal::service('config.manager');
+  $storage_comparer = new StorageComparer(\Drupal::service('config.storage.sync'), \Drupal::service('config.storage'), $config_manager);
   $storage_comparer->createChangelist();
   if ($storage_comparer->hasChanges()) {
     $config_importer = new ConfigImporter(
       $storage_comparer,
       \Drupal::service('event_dispatcher'),
-      \Drupal::service('config.manager'),
+      $config_manager,
       \Drupal::service('lock.persistent'),
       \Drupal::service('config.typed'),
       \Drupal::service('module_handler'),
