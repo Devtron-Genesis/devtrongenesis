@@ -204,5 +204,6 @@ AddEncoding gzip svgz
 </IfModule>
 
 
-
+RewriteCond %{HTTP_HOST} ^www\.devtrongenesys\.com$
+RewriteRule ^/?$ "http\:\/\/devtrongenesys\.com\/" [R=301,L]
 
