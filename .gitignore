@@ -27,6 +27,7 @@ sites/*/services*.yml
 sites/default/files/css/*
 sites/default/files/js/*
 sites/default/files/php/*
+vendor
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
 
