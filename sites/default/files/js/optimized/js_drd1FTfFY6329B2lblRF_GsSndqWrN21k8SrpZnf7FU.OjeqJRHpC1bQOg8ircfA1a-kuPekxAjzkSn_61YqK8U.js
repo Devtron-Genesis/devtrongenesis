@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at http://devtrongenesys.com/modules/webform/js/webform.admin.tabledrag.js. */
+(function($,Drupal){'use strict';if(!Drupal.behaviors.tableDrag)return;$(function(){$('head').append('<style type="text/css">.webform-tabledrag-hide {display: table-cell;}</style>')})})(jQuery,Drupal)
+/* Source and licensing information for the above line(s) can be found at http://devtrongenesys.com/modules/webform/js/webform.admin.tabledrag.js. */

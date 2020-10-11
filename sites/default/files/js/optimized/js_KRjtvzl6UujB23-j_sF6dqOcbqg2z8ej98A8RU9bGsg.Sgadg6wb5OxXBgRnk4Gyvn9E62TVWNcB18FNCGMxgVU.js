@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at http://devtrongenesys.com/core/misc/drupal.init.js. */
+if(window.jQuery)jQuery.noConflict();document.documentElement.className+=' js';(function(domready,Drupal,drupalSettings){domready(function(){Drupal.attachBehaviors(document,drupalSettings)})})(domready,Drupal,window.drupalSettings)
+/* Source and licensing information for the above line(s) can be found at http://devtrongenesys.com/core/misc/drupal.init.js. */

@@ -1,0 +1,26 @@
+# Norwegian Bokmål translation of Views Reference Field (8.x-1.2)
+# Copyright (c) 2018 by the Norwegian Bokmål translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Views Reference Field (8.x-1.2)\n"
+"POT-Creation-Date: 2018-01-09 23:43+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Norwegian Bokmål\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Title"
+msgstr "Tittel"
+msgid "Views"
+msgstr "Visninger"
+msgid "Options"
+msgstr "Valg"
+msgid "Argument"
+msgstr "Argument"
+msgid "Reference"
+msgstr "Referanse"
+msgid "Data"
+msgstr "Data"
