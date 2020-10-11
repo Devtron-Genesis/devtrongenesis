@@ -1,4 +1,0 @@
-/* Source and licensing information for the line(s) below can be found at http://devtrongenesys.com/core/modules/language/language.admin.js. */
-(function($,Drupal){Drupal.behaviors.negotiationLanguage={attach:function attach(){var $configForm=$('#language-negotiation-configure-form'),inputSelector='input[name$="[configurable]"]'
-function toggleTable(checkbox){var $checkbox=$(checkbox);$checkbox.closest('.table-language-group').find('table, .tabledrag-toggle-weight').toggle($checkbox.prop('checked'))};$configForm.once('negotiation-language-admin-bind').on('change',inputSelector,function(event){toggleTable(event.target)});$configForm.find(inputSelector+':not(:checked)').each(function(index,element){toggleTable(element)})}}})(jQuery,Drupal)
-/* Source and licensing information for the above line(s) can be found at http://devtrongenesys.com/core/modules/language/language.admin.js. */

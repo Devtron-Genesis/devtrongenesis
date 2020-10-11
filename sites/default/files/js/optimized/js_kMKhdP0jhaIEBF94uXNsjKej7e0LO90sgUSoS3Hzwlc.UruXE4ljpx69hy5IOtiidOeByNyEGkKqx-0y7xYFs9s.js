@@ -1,3 +1,0 @@
-/* Source and licensing information for the line(s) below can be found at http://devtrongenesys.com/core/modules/comment/comment-entity-form.js. */
-(function($,Drupal){Drupal.behaviors.commentFieldsetSummaries={attach:function attach(context){var $context=$(context);$context.find('fieldset.comment-entity-settings-form').drupalSetSummary(function(context){return Drupal.checkPlain($(context).find('.js-form-item-comment input:checked').next('label').text())})}}})(jQuery,Drupal)
-/* Source and licensing information for the above line(s) can be found at http://devtrongenesys.com/core/modules/comment/comment-entity-form.js. */

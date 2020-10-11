@@ -1,3 +1,0 @@
-/* Source and licensing information for the line(s) below can be found at http://devtrongenesys.com/core/modules/toolbar/js/models/MenuModel.js. */
-(function(Backbone,Drupal){Drupal.toolbar.MenuModel=Backbone.Model.extend({defaults:{subtrees:{}}})})(Backbone,Drupal)
-/* Source and licensing information for the above line(s) can be found at http://devtrongenesys.com/core/modules/toolbar/js/models/MenuModel.js. */

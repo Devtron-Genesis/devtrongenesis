@@ -1,0 +1,13 @@
+name: 'Paragraphs Class'
+type: module
+description: 'Add to Drupal 8 Paragraphs Experimental Widget Class throw Behaviors'
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: 'Paragraphs'
+dependencies:
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2020-09-13
+version: '8.x-1.0-alpha2'
+project: 'paragraphs_class'
+datestamp: 1599983529

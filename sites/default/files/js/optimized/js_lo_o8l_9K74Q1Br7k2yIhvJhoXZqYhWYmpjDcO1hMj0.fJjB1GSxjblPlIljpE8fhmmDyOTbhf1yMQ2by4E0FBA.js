@@ -1,3 +1,0 @@
-/* Source and licensing information for the line(s) below can be found at http://devtrongenesys.com/modules/webform/js/webform.contextual.js. */
-(function($){'use strict';$(document).on('click','.contextual',function(){$(this).find('a.webform-contextual').once('webform-contextual').each(function(){this.href=this.href.split('?')[0];if(/webform\/([^/]+)\/test/.test(this.href))this.href=window.location.pathname+'?_webform_test='+RegExp.$1})})})(jQuery)
-/* Source and licensing information for the above line(s) can be found at http://devtrongenesys.com/modules/webform/js/webform.contextual.js. */

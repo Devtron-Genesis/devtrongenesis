@@ -1,3 +1,0 @@
-/* Source and licensing information for the line(s) below can be found at http://devtrongenesys.com/modules/webform/js/webform.admin.dropbutton.js. */
-(function($,Drupal){'use strict';if(!Drupal.behaviors.dropButton)return;var dropButton=Drupal.behaviors.dropButton;Drupal.behaviors.dropButton={attach:function(context,settings){dropButton.attach(context,settings);$(context).find('.webform-dropbutton .dropbutton-wrapper').once('webform-dropbutton').css('visibility','visible')}}})(jQuery,Drupal)
-/* Source and licensing information for the above line(s) can be found at http://devtrongenesys.com/modules/webform/js/webform.admin.dropbutton.js. */
