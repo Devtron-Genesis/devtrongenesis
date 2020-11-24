@@ -1,0 +1,21 @@
+uuid: 4f29c97d-3977-412a-a9c7-ae3d75aa37b8
+langcode: en
+status: true
+dependencies: {  }
+id: comment_editer
+label: 'Testimonial editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'access toolbar'
+  - 'administer blocks'
+  - 'create article content'
+  - 'create portfolio content'
+  - 'create testimonial content'
+  - 'delete any testimonial content'
+  - 'delete own testimonial content'
+  - 'delete testimonial revisions'
+  - 'edit any testimonial content'
+  - 'edit own testimonial content'
+  - 'revert testimonial revisions'
+  - 'view testimonial revisions'

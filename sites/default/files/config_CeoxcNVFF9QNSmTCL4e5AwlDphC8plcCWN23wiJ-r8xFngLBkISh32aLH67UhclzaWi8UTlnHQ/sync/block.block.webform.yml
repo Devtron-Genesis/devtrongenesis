@@ -1,0 +1,25 @@
+uuid: 2f1c3887-2baf-45dc-b8d1-87a9489415f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.email_subscribe
+  module:
+    - webform
+  theme:
+    - yg_sprint
+id: webform
+theme: yg_sprint
+region: disable_blocks
+weight: -8
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Email Subscribe'
+  provider: webform
+  label_display: visible
+  webform_id: email_subscribe
+  default_data: ''
+  redirect: false
+visibility: {  }

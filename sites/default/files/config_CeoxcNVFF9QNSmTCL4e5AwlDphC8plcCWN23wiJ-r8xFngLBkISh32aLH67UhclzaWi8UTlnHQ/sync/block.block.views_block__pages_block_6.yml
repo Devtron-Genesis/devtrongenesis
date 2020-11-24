@@ -1,0 +1,24 @@
+uuid: 5404459e-8716-49c8-94e4-97b28c62c1d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.pages
+  module:
+    - views
+  theme:
+    - yg_sprint
+id: views_block__pages_block_6
+theme: yg_sprint
+region: footer_latest_blog
+weight: 0
+provider: null
+plugin: 'views_block:pages-block_6'
+settings:
+  id: 'views_block:pages-block_6'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 10d6e3e2-2b91-434d-a428-c6c0cdd8086e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_why_dg
+    - node.type.service_pages
+  module:
+    - block_field
+id: node.service_pages.field_why_dg
+field_name: field_why_dg
+entity_type: node
+bundle: service_pages
+label: why-DG
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  selection: blocks
+  selection_settings:
+    plugin_ids:
+      'block_content:ae8a88d4-1202-4834-983f-93d90e14809b': 'block_content:ae8a88d4-1202-4834-983f-93d90e14809b'
+field_type: block_field

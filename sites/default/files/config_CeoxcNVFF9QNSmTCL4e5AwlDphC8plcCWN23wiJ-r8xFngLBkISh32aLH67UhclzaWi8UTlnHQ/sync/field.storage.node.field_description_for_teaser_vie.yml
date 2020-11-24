@@ -1,0 +1,19 @@
+uuid: 2056b1fa-0ba1-4f60-a965-d27027e6d7f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_description_for_teaser_vie
+field_name: field_description_for_teaser_vie
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,113 @@
+label: Mediebibliotek
+display:
+  default:
+    display_title: Hoved
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 'Apply Filters'
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+          tags:
+            previous: ‹‹
+            next: ››
+      fields:
+        media_bulk_form:
+          action_title: Action
+      filters:
+        status:
+          expose:
+            label: Publiseringsstatus
+          group_info:
+            label: Publisert
+            group_items:
+              1:
+                title: Publisert
+              2:
+                title: Avpublisert
+        name:
+          expose:
+            label: Navn
+        bundle:
+          expose:
+            label: Mediatype
+          group_info:
+            label: Mediatype
+        langcode:
+          expose:
+            label: Language
+      sorts:
+        created:
+          expose:
+            label: 'Nyeste først'
+        name:
+          expose:
+            label: 'Navn (A-Å)'
+        name_1:
+          expose:
+            label: 'Navn (Å-A)'
+      title: Media
+      empty:
+        area_text_custom:
+          content: 'Ingen media tilgjengelig'
+  page:
+    display_title: Side
+    display_options:
+      fields:
+        media_bulk_form:
+          action_title: Action
+        name:
+          separator: ', '
+        edit_media:
+          text: Edit
+        delete_media:
+          text: Delete
+  widget:
+    display_title: Skjermelement
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Navn
+      arguments:
+        bundle:
+          exception:
+            title: Alle
+      header:
+        display_link_grid:
+          label: Rutenett
+        display_link_table:
+          label: Tabell
+  widget_table:
+    display_title: 'Skjermelement (tabell)'
+    display_options:
+      fields:
+        thumbnail__target_id:
+          label: Miniatyrbilde
+        name:
+          label: Navn
+        uid:
+          label: Forfatter
+        changed:
+          label: Oppdatert
+      filters:
+        name:
+          expose:
+            label: Navn
+      arguments:
+        bundle:
+          exception:
+            title: Alle
+      header:
+        display_link_grid:
+          label: Rutenett
+        display_link_table:
+          label: Tabell

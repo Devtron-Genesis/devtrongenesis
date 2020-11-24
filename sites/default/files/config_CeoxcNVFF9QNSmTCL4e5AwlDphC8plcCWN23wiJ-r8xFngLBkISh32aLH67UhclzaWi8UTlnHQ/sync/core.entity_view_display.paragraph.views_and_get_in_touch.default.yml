@@ -1,0 +1,99 @@
+uuid: 482852d9-24bd-4bf0-b06a-44709cbddab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.views_and_get_in_touch.field_blog_view
+    - field.field.paragraph.views_and_get_in_touch.field_body
+    - field.field.paragraph.views_and_get_in_touch.field_image
+    - field.field.paragraph.views_and_get_in_touch.field_portfolio_view
+    - field.field.paragraph.views_and_get_in_touch.field_testimonial_view
+    - field.field.paragraph.views_and_get_in_touch.field_title
+    - field.field.paragraph.views_and_get_in_touch.field_url
+    - paragraphs.paragraphs_type.views_and_get_in_touch
+  module:
+    - image
+    - link
+    - text
+    - viewsreference
+id: paragraph.views_and_get_in_touch.default
+targetEntityType: paragraph
+bundle: views_and_get_in_touch
+mode: default
+content:
+  field_blog_view:
+    weight: 4
+    label: hidden
+    settings:
+      plugin_types:
+        page: page
+        block: block
+        default: 0
+        feed: 0
+        embed: 0
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 6
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_portfolio_view:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        page: page
+        block: block
+        default: 0
+        feed: 0
+        embed: 0
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+  field_testimonial_view:
+    weight: 5
+    label: hidden
+    settings:
+      plugin_types:
+        page: page
+        block: block
+        default: 0
+        feed: 0
+        embed: 0
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

@@ -1,0 +1,29 @@
+uuid: c2158f25-23fa-4228-b92c-11b990699054
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ser
+    - node.type.service_pages
+    - taxonomy.vocabulary.service_type
+id: node.service_pages.field_ser
+field_name: field_ser
+entity_type: node
+bundle: service_pages
+label: 'Service type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      service_type: service_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

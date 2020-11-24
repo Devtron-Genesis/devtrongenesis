@@ -1,0 +1,23 @@
+uuid: 745729d6-aae1-4bf8-8393-22ae8f1a19fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_googleplus
+    - node.type.portfolio
+  module:
+    - link
+id: node.portfolio.field_googleplus
+field_name: field_googleplus
+entity_type: node
+bundle: portfolio
+label: GooglePlus
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

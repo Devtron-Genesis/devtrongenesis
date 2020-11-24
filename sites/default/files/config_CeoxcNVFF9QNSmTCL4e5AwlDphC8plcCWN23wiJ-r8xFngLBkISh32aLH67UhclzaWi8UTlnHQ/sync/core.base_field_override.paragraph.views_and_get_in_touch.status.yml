@@ -1,0 +1,22 @@
+uuid: 0c612501-1837-4338-89ea-17ac997a7a85
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.views_and_get_in_touch
+id: paragraph.views_and_get_in_touch.status
+field_name: status
+entity_type: paragraph
+bundle: views_and_get_in_touch
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

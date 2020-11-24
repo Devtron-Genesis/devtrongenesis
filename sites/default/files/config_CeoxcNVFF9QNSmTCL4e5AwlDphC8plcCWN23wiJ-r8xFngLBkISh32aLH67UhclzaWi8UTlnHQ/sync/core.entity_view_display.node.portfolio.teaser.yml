@@ -1,0 +1,69 @@
+uuid: 16238bd5-2b5d-4dc1-bfe0-d90f658e7ccd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.portfolio.body
+    - field.field.node.portfolio.field_facebook
+    - field.field.node.portfolio.field_googleplus
+    - field.field.node.portfolio.field_hover_image
+    - field.field.node.portfolio.field_hover_text
+    - field.field.node.portfolio.field_image
+    - field.field.node.portfolio.field_pinterest
+    - field.field.node.portfolio.field_twitter
+    - node.type.portfolio
+  module:
+    - image
+    - text
+    - user
+id: node.portfolio.teaser
+targetEntityType: node
+bundle: portfolio
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_hover_image:
+    type: image
+    weight: 3
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_hover_text:
+    type: string
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 2
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_facebook: true
+  field_googleplus: true
+  field_pinterest: true
+  field_twitter: true
+  langcode: true

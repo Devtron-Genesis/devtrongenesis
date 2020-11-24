@@ -1,0 +1,13 @@
+uuid: ab76a1f0-744e-43ed-8cd5-a3d7898674c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_class
+id: left_text_right_image
+label: 'left text & right image'
+icon_uuid: null
+description: ''
+behavior_plugins:
+  paragraphs_class_paragraph_class:
+    enabled: true

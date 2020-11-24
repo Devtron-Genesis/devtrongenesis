@@ -1,0 +1,23 @@
+uuid: 63481dab-899a-431d-88b4-c5c9b38878b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pinterest
+    - node.type.portfolio
+  module:
+    - link
+id: node.portfolio.field_pinterest
+field_name: field_pinterest
+entity_type: node
+bundle: portfolio
+label: Pinterest
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

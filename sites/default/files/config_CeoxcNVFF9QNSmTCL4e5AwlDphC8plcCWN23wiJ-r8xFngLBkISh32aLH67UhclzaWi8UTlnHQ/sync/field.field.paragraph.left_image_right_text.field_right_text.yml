@@ -1,0 +1,21 @@
+uuid: 1931c270-5196-445b-9b0f-f809d9c11668
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_right_text
+    - paragraphs.paragraphs_type.left_image_right_text
+  module:
+    - text
+id: paragraph.left_image_right_text.field_right_text
+field_name: field_right_text
+entity_type: paragraph
+bundle: left_image_right_text
+label: 'right text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

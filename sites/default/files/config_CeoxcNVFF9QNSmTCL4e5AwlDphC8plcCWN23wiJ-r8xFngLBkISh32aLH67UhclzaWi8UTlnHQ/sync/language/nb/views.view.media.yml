@@ -1,0 +1,75 @@
+label: Media
+display:
+  default:
+    display_title: Hoved
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+          tags:
+            previous: '‹ Forrige'
+            next: 'Neste ›'
+            first: '« Første'
+            last: 'Siste »'
+      fields:
+        media_bulk_form:
+          action_title: Action
+        thumbnail__target_id:
+          label: Miniatyrbilde
+          separator: ', '
+        name:
+          label: Medianavn
+          separator: ', '
+        bundle:
+          label: Type
+          separator: ', '
+        uid:
+          label: Forfatter
+          separator: ', '
+        status:
+          label: Status
+          settings:
+            format_custom_true: Publisert
+            format_custom_false: Avpublisert
+          separator: ', '
+        changed:
+          label: Oppdatert
+          separator: ', '
+        operations:
+          label: Handlinger
+      filters:
+        name:
+          expose:
+            label: Medianavn
+        bundle:
+          expose:
+            label: Type
+        status:
+          expose:
+            label: Sant
+          group_info:
+            label: Publiseringsstatus
+            group_items:
+              1:
+                title: Publisert
+              2:
+                title: Avpublisert
+        langcode:
+          expose:
+            label: Language
+      title: Media
+      empty:
+        area_text_custom:
+          content: 'Ingen media tilgjengelig'
+  media_page_list:
+    display_title: Media

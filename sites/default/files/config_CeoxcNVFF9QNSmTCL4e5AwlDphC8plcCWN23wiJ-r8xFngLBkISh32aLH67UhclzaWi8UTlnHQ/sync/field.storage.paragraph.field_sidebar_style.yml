@@ -1,0 +1,27 @@
+uuid: 2b0866ef-44b4-4546-a3c6-57ddd2da44ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_sidebar_style
+field_name: field_sidebar_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Right Sidebar'
+    -
+      value: '1'
+      label: 'Left Sidebar'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

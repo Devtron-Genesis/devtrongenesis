@@ -1,0 +1,34 @@
+uuid: 12bb4400-5f5c-4e8c-8bfb-322f66adea83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_service_item_ref
+    - paragraphs.paragraphs_type.our_service
+    - paragraphs.paragraphs_type.service_items
+  module:
+    - entity_reference_revisions
+id: paragraph.our_service.field_service_item_ref
+field_name: field_service_item_ref
+entity_type: paragraph
+bundle: our_service
+label: 'Service Item Ref'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      service_items: service_items
+    target_bundles_drag_drop:
+      our_service:
+        weight: 3
+        enabled: false
+      service_items:
+        enabled: true
+        weight: 4
+field_type: entity_reference_revisions

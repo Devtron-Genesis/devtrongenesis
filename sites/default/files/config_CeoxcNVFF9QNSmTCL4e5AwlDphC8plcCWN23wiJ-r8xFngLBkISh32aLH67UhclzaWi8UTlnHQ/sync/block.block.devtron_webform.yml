@@ -1,0 +1,25 @@
+uuid: 28c6c1a9-0e23-4388-b63c-6d8c59af38b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.email_subscribe
+  module:
+    - webform
+  theme:
+    - devtron
+id: devtron_webform
+theme: devtron
+region: disable_blocks
+weight: -8
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Email Subscribe'
+  provider: webform
+  label_display: visible
+  webform_id: email_subscribe
+  default_data: ''
+  redirect: false
+visibility: {  }

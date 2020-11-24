@@ -1,0 +1,15 @@
+uuid: 96c55c07-0de3-4580-a6e0-4d0007883713
+langcode: en
+status: true
+dependencies: {  }
+name: media_library
+label: 'Media Library (220x220)'
+effects:
+  6069a89d-9e86-41d8-bce5-9249b24628dc:
+    uuid: 6069a89d-9e86-41d8-bce5-9249b24628dc
+    id: image_scale
+    weight: 0
+    data:
+      width: 220
+      height: 220
+      upscale: false

@@ -1,0 +1,23 @@
+uuid: e4d25aa7-184a-40e2-be72-715a5d0811bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_url
+    - paragraphs.paragraphs_type.views_and_get_in_touch
+  module:
+    - link
+id: paragraph.views_and_get_in_touch.field_url
+field_name: field_url
+entity_type: paragraph
+bundle: views_and_get_in_touch
+label: Url
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

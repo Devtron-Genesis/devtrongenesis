@@ -1,0 +1,20 @@
+uuid: 860b1db0-c9e8-4e28-87b2-45a978cce624
+langcode: en
+status: true
+dependencies:
+  theme:
+    - yg_sprint
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: yg_sprint_page_title
+theme: yg_sprint
+region: disable_blocks
+weight: -11
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

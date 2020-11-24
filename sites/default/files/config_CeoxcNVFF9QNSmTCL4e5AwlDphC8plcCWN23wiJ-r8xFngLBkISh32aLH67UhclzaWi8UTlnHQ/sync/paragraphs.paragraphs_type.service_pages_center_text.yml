@@ -1,0 +1,13 @@
+uuid: 20417adb-f798-4176-abe8-513bd97ef39c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs_class
+id: service_pages_center_text
+label: 'service pages center text'
+icon_uuid: null
+description: ''
+behavior_plugins:
+  paragraphs_class_paragraph_class:
+    enabled: true

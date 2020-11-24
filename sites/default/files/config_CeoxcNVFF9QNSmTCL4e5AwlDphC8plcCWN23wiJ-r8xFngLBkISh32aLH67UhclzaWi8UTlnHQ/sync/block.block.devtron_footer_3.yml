@@ -1,0 +1,30 @@
+uuid: 12e930f7-8c42-4f19-8f5b-180f07cfde5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - devtron
+id: devtron_footer_3
+theme: devtron
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Navigation
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/25
+    negate: false
+    context_mapping: {  }

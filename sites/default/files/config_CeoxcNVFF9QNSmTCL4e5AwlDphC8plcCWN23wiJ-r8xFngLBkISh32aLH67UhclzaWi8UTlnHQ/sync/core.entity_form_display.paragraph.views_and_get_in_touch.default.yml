@@ -1,0 +1,92 @@
+uuid: 9e6a87a8-6d01-4359-b371-08938c97436c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.views_and_get_in_touch.field_blog_view
+    - field.field.paragraph.views_and_get_in_touch.field_body
+    - field.field.paragraph.views_and_get_in_touch.field_image
+    - field.field.paragraph.views_and_get_in_touch.field_portfolio_view
+    - field.field.paragraph.views_and_get_in_touch.field_testimonial_view
+    - field.field.paragraph.views_and_get_in_touch.field_title
+    - field.field.paragraph.views_and_get_in_touch.field_url
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.views_and_get_in_touch
+  module:
+    - image
+    - link
+    - text
+    - viewsreference
+id: paragraph.views_and_get_in_touch.default
+targetEntityType: paragraph
+bundle: views_and_get_in_touch
+mode: default
+content:
+  field_blog_view:
+    weight: 5
+    settings:
+      match_operator: STARTS_WITH
+      size: '60'
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_body:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_image:
+    weight: 4
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_portfolio_view:
+    weight: 0
+    settings:
+      match_operator: STARTS_WITH
+      size: '60'
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_testimonial_view:
+    weight: 6
+    settings:
+      match_operator: STARTS_WITH
+      size: '60'
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_url:
+    weight: 3
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

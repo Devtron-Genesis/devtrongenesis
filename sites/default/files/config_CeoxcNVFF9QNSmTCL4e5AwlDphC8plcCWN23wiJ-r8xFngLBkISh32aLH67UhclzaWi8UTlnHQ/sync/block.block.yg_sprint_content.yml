@@ -1,0 +1,22 @@
+uuid: a7a0909f-4e0e-4929-9b31-9609cdc81f8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - yg_sprint
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: yg_sprint_content
+theme: yg_sprint
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

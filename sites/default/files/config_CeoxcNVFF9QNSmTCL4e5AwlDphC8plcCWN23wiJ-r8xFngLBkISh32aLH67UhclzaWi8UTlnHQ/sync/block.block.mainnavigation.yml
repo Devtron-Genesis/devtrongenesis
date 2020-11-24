@@ -1,0 +1,25 @@
+uuid: d8fb85ed-7f6b-4829-b0d9-a9bcc7824e00
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - devtron
+id: mainnavigation
+theme: devtron
+region: first_nevbar
+weight: -7
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

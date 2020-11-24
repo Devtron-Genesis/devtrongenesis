@@ -1,0 +1,9 @@
+uuid: 5fd00c29-59f1-4113-8d06-2b7e3c87a01a
+langcode: en
+status: true
+dependencies: {  }
+id: left_right_sidebar
+label: 'Left & Right Sidebar'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

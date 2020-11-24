@@ -1,0 +1,31 @@
+uuid: a9a6c37d-04b9-4249-868a-56eefdde530b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:62c944bd-0fa5-48b3-9807-280ff860f56d'
+  module:
+    - block_content
+    - system
+  theme:
+    - yg_sprint
+id: textwidget
+theme: yg_sprint
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_content:62c944bd-0fa5-48b3-9807-280ff860f56d'
+settings:
+  id: 'block_content:62c944bd-0fa5-48b3-9807-280ff860f56d'
+  label: 'Text Widget'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/24
+    negate: false
+    context_mapping: {  }
