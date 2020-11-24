@@ -1,0 +1,31 @@
+uuid: 95fd1a13-b549-4f70-8dc7-3a28d4e00cf3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:243ea373-bab6-4af6-90c6-cd6bb989ee14'
+  module:
+    - block_content
+    - system
+  theme:
+    - yg_sprint
+id: paragraphwithimage
+theme: yg_sprint
+region: sidebar_first
+weight: -9
+provider: null
+plugin: 'block_content:243ea373-bab6-4af6-90c6-cd6bb989ee14'
+settings:
+  id: 'block_content:243ea373-bab6-4af6-90c6-cd6bb989ee14'
+  label: 'Paragraph with Image'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/24
+    negate: false
+    context_mapping: {  }

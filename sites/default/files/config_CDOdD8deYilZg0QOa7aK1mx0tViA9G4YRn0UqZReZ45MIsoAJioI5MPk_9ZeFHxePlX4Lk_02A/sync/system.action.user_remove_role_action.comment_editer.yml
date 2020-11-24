@@ -1,0 +1,14 @@
+uuid: 6e86cadd-f722-47d5-9cdf-f967b0b02c5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.comment_editer
+  module:
+    - user
+id: user_remove_role_action.comment_editer
+label: 'Remove the Comment editer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: comment_editer

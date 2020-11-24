@@ -1,0 +1,47 @@
+uuid: 388ee8c2-5dc6-41a8-b119-e45f3a69c4a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.our_service.field_service_item_ref
+    - field.field.paragraph.our_service.field_title
+    - field.field.paragraph.our_service.field_url
+    - paragraphs.paragraphs_type.our_service
+  module:
+    - entity_reference_revisions
+    - link
+id: paragraph.our_service.default
+targetEntityType: paragraph
+bundle: our_service
+mode: default
+content:
+  field_service_item_ref:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

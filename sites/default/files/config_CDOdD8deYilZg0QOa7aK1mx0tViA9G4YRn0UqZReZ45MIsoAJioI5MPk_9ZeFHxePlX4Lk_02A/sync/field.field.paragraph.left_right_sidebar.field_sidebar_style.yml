@@ -1,0 +1,21 @@
+uuid: 8a1486d7-1edc-4731-b9fc-b97a8a8772a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sidebar_style
+    - paragraphs.paragraphs_type.left_right_sidebar
+  module:
+    - options
+id: paragraph.left_right_sidebar.field_sidebar_style
+field_name: field_sidebar_style
+entity_type: paragraph
+bundle: left_right_sidebar
+label: 'Sidebar Style'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

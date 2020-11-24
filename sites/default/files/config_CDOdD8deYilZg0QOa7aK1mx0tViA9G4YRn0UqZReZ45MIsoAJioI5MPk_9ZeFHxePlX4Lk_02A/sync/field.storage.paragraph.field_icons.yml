@@ -1,0 +1,51 @@
+uuid: d2c05ba3-92bc-4dea-a8d6-eecb51e8a9f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_icons
+field_name: field_icons
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ti-layout
+      label: Layout
+    -
+      value: ti-drupal
+      label: Drupal
+    -
+      value: ti-shopping-cart
+      label: ShoppingCart
+    -
+      value: ti-desktop
+      label: Desktop
+    -
+      value: ti-money
+      label: Money
+    -
+      value: ti-settings
+      label: Settings
+    -
+      value: ti-ruler-pencil
+      label: 'Ruler Pencil'
+    -
+      value: ti-mobile
+      label: Mobile
+    -
+      value: ti-microsoft
+      label: Microsoft
+    -
+      value: ti-wand
+      label: Wand
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

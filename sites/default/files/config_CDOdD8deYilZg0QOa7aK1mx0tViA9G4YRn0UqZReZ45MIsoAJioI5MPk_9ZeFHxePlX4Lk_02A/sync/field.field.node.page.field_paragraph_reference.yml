@@ -1,0 +1,49 @@
+uuid: f1982a28-44dd-430a-a358-9eb3332a26f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraph_reference
+    - node.type.page
+    - paragraphs.paragraphs_type.contact_us
+    - paragraphs.paragraphs_type.left_right_sidebar
+    - paragraphs.paragraphs_type.our_service
+    - paragraphs.paragraphs_type.views_and_get_in_touch
+  module:
+    - entity_reference_revisions
+id: node.page.field_paragraph_reference
+field_name: field_paragraph_reference
+entity_type: node
+bundle: page
+label: 'Paragraph Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      our_service: our_service
+      views_and_get_in_touch: views_and_get_in_touch
+      contact_us: contact_us
+      left_right_sidebar: left_right_sidebar
+    target_bundles_drag_drop:
+      our_service:
+        enabled: true
+        weight: -9
+      service_items:
+        weight: -8
+        enabled: false
+      views_and_get_in_touch:
+        enabled: true
+        weight: -7
+      contact_us:
+        enabled: true
+        weight: -6
+      left_right_sidebar:
+        enabled: true
+        weight: 7
+field_type: entity_reference_revisions

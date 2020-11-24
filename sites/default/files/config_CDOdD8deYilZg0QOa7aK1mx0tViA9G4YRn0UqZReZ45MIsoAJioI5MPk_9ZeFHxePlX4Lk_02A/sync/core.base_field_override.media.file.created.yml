@@ -1,0 +1,18 @@
+uuid: e0241e85-1f4d-44e3-9c72-80cf76e82beb
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.file
+id: media.file.created
+field_name: created
+entity_type: media
+bundle: file
+label: 'Authored on'
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

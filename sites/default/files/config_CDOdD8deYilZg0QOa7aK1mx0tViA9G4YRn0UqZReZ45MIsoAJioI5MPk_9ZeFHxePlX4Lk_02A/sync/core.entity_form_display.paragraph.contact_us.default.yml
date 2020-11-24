@@ -1,0 +1,64 @@
+uuid: 38ede007-4bac-4889-8387-ac5d4c7018ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.contact_us.field_body
+    - field.field.paragraph.contact_us.field_contact_form
+    - field.field.paragraph.contact_us.field_email
+    - field.field.paragraph.contact_us.field_phone_number
+    - field.field.paragraph.contact_us.field_title
+    - paragraphs.paragraphs_type.contact_us
+  module:
+    - text
+    - webform
+id: paragraph.contact_us.default
+targetEntityType: paragraph
+bundle: contact_us
+mode: default
+content:
+  field_body:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_contact_form:
+    weight: 4
+    settings:
+      default_data: true
+    third_party_settings: {  }
+    type: webform_entity_reference_select
+    region: content
+  field_email:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_phone_number:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

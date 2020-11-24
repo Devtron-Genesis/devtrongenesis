@@ -1,0 +1,56 @@
+uuid: 47ea9eb3-37e2-4b5b-9765-018f0b714fcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_services_sections
+    - node.type.service_pages
+    - paragraphs.paragraphs_type.left_image_right_text
+    - paragraphs.paragraphs_type.left_text_right_image
+    - paragraphs.paragraphs_type.service_pages_center_text
+  module:
+    - entity_reference_revisions
+id: node.service_pages.field_services_sections
+field_name: field_services_sections
+entity_type: node
+bundle: service_pages
+label: 'services sections'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      service_pages_center_text: service_pages_center_text
+      left_image_right_text: left_image_right_text
+      left_text_right_image: left_text_right_image
+    target_bundles_drag_drop:
+      service_pages_center_text:
+        enabled: true
+        weight: 9
+      contact_us:
+        weight: 10
+        enabled: false
+      left_image_right_text:
+        enabled: true
+        weight: 11
+      left_right_sidebar:
+        weight: 12
+        enabled: false
+      left_text_right_image:
+        enabled: true
+        weight: 13
+      our_service:
+        weight: 14
+        enabled: false
+      service_items:
+        weight: 15
+        enabled: false
+      views_and_get_in_touch:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

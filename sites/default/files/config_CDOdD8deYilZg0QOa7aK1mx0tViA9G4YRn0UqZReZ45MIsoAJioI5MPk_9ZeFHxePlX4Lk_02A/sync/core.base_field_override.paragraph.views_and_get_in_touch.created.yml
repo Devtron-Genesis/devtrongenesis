@@ -1,0 +1,18 @@
+uuid: 4b3d0017-83ea-4685-9d0d-017a650564d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.views_and_get_in_touch
+id: paragraph.views_and_get_in_touch.created
+field_name: created
+entity_type: paragraph
+bundle: views_and_get_in_touch
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

@@ -1,0 +1,64 @@
+uuid: f2ee70c9-d975-4929-ad45-8fa6ff7f848b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.left_right_sidebar.field_blog_view
+    - field.field.paragraph.left_right_sidebar.field_body
+    - field.field.paragraph.left_right_sidebar.field_left_right_image
+    - field.field.paragraph.left_right_sidebar.field_sidebar_style
+    - field.field.paragraph.left_right_sidebar.field_title
+    - paragraphs.paragraphs_type.left_right_sidebar
+  module:
+    - media_library
+    - text
+    - viewsreference
+id: paragraph.left_right_sidebar.default
+targetEntityType: paragraph
+bundle: left_right_sidebar
+mode: default
+content:
+  field_blog_view:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: '60'
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+  field_body:
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_left_right_image:
+    type: media_library_widget
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sidebar_style:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

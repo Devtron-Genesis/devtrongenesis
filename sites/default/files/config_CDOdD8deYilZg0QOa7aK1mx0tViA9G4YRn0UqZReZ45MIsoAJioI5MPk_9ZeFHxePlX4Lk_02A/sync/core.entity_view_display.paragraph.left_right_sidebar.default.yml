@@ -1,0 +1,61 @@
+uuid: c4a9b555-2110-43eb-8521-5b05dc34dd4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.left_right_sidebar.field_blog_view
+    - field.field.paragraph.left_right_sidebar.field_body
+    - field.field.paragraph.left_right_sidebar.field_left_right_image
+    - field.field.paragraph.left_right_sidebar.field_sidebar_style
+    - field.field.paragraph.left_right_sidebar.field_title
+    - paragraphs.paragraphs_type.left_right_sidebar
+  module:
+    - options
+    - text
+    - viewsreference
+id: paragraph.left_right_sidebar.default
+targetEntityType: paragraph
+bundle: left_right_sidebar
+mode: default
+content:
+  field_blog_view:
+    weight: 5
+    label: above
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: content
+  field_body:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_left_right_image:
+    type: entity_reference_entity_view
+    weight: 6
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_sidebar_style:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 6a8158b5-70d3-4d97-9ba3-664cf830cecc
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_field
+    - node
+id: node.field_why_dg
+field_name: field_why_dg
+entity_type: node
+type: block_field
+settings: {  }
+module: block_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

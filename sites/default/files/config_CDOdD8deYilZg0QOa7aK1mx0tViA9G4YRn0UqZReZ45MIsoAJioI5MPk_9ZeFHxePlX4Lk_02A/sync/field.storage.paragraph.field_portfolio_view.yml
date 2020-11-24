@@ -1,0 +1,21 @@
+uuid: ce0b7c4c-44c1-4b99-bb2e-7cb67d5f237e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - views
+    - viewsreference
+id: paragraph.field_portfolio_view
+field_name: field_portfolio_view
+entity_type: paragraph
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

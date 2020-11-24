@@ -1,0 +1,30 @@
+uuid: 9886574f-582a-4b18-afb3-5f0ef538d122
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - yg_sprint
+id: footer_3
+theme: yg_sprint
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Navigation
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/25
+    negate: false
+    context_mapping: {  }

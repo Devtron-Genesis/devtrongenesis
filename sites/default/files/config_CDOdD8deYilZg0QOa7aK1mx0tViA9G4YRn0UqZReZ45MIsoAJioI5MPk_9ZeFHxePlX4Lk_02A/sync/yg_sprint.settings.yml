@@ -1,0 +1,28 @@
+features:
+  node_user_picture: 1
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+logo:
+  use_default: 0
+  path: 'public://logo_0.png'
+favicon:
+  use_default: 0
+  path: 'public://favicon.png'
+  mimetype: image/png
+facebook_url: 'https://www.facebook.com/DevtronGenesis'
+twitter_url: 'https://twitter.com/devtrongenesis?lang=en'
+dribbble_url: ''
+google_plus_url: ''
+instagram_url: ''
+linkedin_url: 'https://www.linkedin.com/company/devtron-genesis/about/'
+about_title: 'About Us'
+about_description:
+  value: "<p>At Devtron Genesis we take challenges and build awesome, inspiring and multifaceted apps solutions depleting Agile and Lean methodologies.</p>\r\n"
+  format: basic_html
+contact_title: 'Contact Us'
+address:
+  value: "<p>Head Office<br />\r\n93- C Jonsvannsvn<br />\r\nTrondheim, 7050 Norway<br />\r\n+47 93687889</p>\r\n\r\n<p>Pakistan<br />\r\n98-E Model Town<br />\r\nLahore, Pakistan<br />\r\n+92 (331) 3388 766</p>\r\n"
+  format: basic_html
+email: ''
+phone: ''

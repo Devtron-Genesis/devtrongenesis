@@ -1,0 +1,22 @@
+uuid: ea268b69-be41-4a43-b1d3-36b40e2deedd
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - yg_sprint
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: yg_sprint_help
+theme: yg_sprint
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: cb1b8372-c856-4090-a3b9-e98f27a550e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.left_right_sidebar
+id: paragraph.left_right_sidebar.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: left_right_sidebar
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

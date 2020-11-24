@@ -1,0 +1,20 @@
+uuid: 0c9aa59d-55ba-46f0-a4a2-5e8d593c3df6
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - webform
+id: paragraph.field_contact_form
+field_name: field_contact_form
+entity_type: paragraph
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: 2f3f5b8d-9530-4cb8-951b-23b103b2236b
+langcode: en
+status: true
+dependencies: {  }
+id: g3XYqcXbSKPVBDODwnT6pq7oqhCFkPryj4vVqrl_Kfc
+label: 'http://devtrongenesys.com/'
+context:
+  language: en

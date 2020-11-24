@@ -1,0 +1,50 @@
+uuid: 7d584bc5-72b1-401f-bdd3-aec132310fb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.service_pages.field_banner_image
+    - field.field.node.service_pages.field_description_for_teaser_vie
+    - field.field.node.service_pages.field_image_for_teaser_view
+    - field.field.node.service_pages.field_related_services
+    - field.field.node.service_pages.field_ser
+    - field.field.node.service_pages.field_services_sections
+    - image.style.medium
+    - node.type.service_pages
+  module:
+    - image
+    - text
+    - user
+id: node.service_pages.teaser
+targetEntityType: node
+bundle: service_pages
+mode: teaser
+content:
+  field_description_for_teaser_vie:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_image_for_teaser_view:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_banner_image: true
+  field_related_services: true
+  field_ser: true
+  field_services_sections: true
+  langcode: true

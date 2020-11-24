@@ -1,0 +1,4 @@
+title: Tilbakemelding
+handlers:
+  email_notification:
+    label: E-postvarsling

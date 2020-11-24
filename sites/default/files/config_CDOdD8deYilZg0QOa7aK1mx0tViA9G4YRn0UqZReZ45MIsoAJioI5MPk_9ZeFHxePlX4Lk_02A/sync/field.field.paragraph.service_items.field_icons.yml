@@ -1,0 +1,21 @@
+uuid: ae30b1e5-4236-410b-ad89-59f25a283ceb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icons
+    - paragraphs.paragraphs_type.service_items
+  module:
+    - options
+id: paragraph.service_items.field_icons
+field_name: field_icons
+entity_type: paragraph
+bundle: service_items
+label: Icons
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

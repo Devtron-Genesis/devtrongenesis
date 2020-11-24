@@ -1,0 +1,153 @@
+display:
+  default:
+    display_title: Hoved
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Bruk
+          reset_button_label: Nullstill
+          exposed_sorts_label: 'Sortér etter'
+          sort_asc_label: Stigende
+          sort_desc_label: Synkende
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Første'
+            last: 'Siste »'
+          expose:
+            items_per_page_label: 'Elementer per side'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Forskyving
+      fields:
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Utkast
+          separator: ', '
+        created:
+          label: Opprettet
+          separator: ', '
+        remote_addr:
+          label: IP-adresse
+          separator: ', '
+        view_webform_submission:
+          label: Handlinger
+          text: vis
+      header:
+        result:
+          content: 'Viser @start - @end av @total'
+      arguments:
+        in_draft:
+          exception:
+            title: Alle
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Action
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Utkast
+          separator: ', '
+        sticky:
+          label: Klistret
+          separator: ', '
+        locked:
+          label: Låst
+          separator: ', '
+        created:
+          label: Opprettet
+          separator: ', '
+        completed:
+          label: Fullført
+          separator: ', '
+        remote_addr:
+          label: IP-adresse
+          separator: ', '
+        operations:
+          label: Handlinger
+      filters:
+        sticky:
+          expose:
+            label: Klistret
+        locked:
+          expose:
+            label: Låst
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: Action
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Utkast
+          separator: ', '
+        sticky:
+          label: Klistret
+          separator: ', '
+        locked:
+          label: Låst
+          separator: ', '
+        created:
+          label: Opprettet
+          separator: ', '
+        completed:
+          label: Fullført
+          separator: ', '
+        remote_addr:
+          label: IP-adresse
+          separator: ', '
+        view_webform_submission:
+          label: Handlinger
+          text: vis
+        edit_webform_submission:
+          label: Handlinger
+          text: rediger
+      filters:
+        sticky:
+          expose:
+            label: Klistret
+        locked:
+          expose:
+            label: Låst
+  embed_review:
+    display_options:
+      fields:
+        sid:
+          label: '#'
+          separator: ', '
+        in_draft:
+          label: Utkast
+          separator: ', '
+        sticky:
+          label: Klistret
+          separator: ', '
+        locked:
+          label: Låst
+          separator: ', '
+        created:
+          label: Opprettet
+          separator: ', '
+        completed:
+          label: Fullført
+          separator: ', '
+        remote_addr:
+          label: IP-adresse
+          separator: ', '
+        view_webform_submission:
+          label: Handlinger
+          text: vis
+      filters:
+        sticky:
+          expose:
+            label: Klistret
+        locked:
+          expose:
+            label: Låst

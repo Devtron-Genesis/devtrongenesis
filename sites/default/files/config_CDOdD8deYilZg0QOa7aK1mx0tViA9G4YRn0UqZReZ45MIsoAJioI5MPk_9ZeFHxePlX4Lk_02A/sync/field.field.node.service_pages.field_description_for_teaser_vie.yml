@@ -1,0 +1,21 @@
+uuid: e253bf7f-9645-4946-9994-5a57352491bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_for_teaser_vie
+    - node.type.service_pages
+  module:
+    - text
+id: node.service_pages.field_description_for_teaser_vie
+field_name: field_description_for_teaser_vie
+entity_type: node
+bundle: service_pages
+label: 'description for teaser view'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

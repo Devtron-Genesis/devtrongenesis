@@ -1,0 +1,19 @@
+uuid: 278019bc-d472-4036-a170-988f1cbea5a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_pinterest
+field_name: field_pinterest
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

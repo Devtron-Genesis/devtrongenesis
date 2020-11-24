@@ -1,0 +1,14 @@
+uuid: f9a1fe68-8af0-4f49-a34f-e0432ae448ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.comment_editer
+  module:
+    - user
+id: user_add_role_action.comment_editer
+label: 'Add the Comment editer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: comment_editer
